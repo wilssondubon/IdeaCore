@@ -1,0 +1,12 @@
+D:\Proyectos2022\BackendGI\GICoreInterfaces\bin\Debug\net7.0\GICoreInterfaces.deps.json
+D:\Proyectos2022\BackendGI\GICoreInterfaces\bin\Debug\net7.0\GICoreInterfaces.dll
+D:\Proyectos2022\BackendGI\GICoreInterfaces\bin\Debug\net7.0\GICoreInterfaces.pdb
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.csproj.AssemblyReference.cache
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.AssemblyInfoInputs.cache
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.AssemblyInfo.cs
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.csproj.CoreCompileInputs.cache
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.dll
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\refint\GICoreInterfaces.dll
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\GICoreInterfaces.pdb
+D:\Proyectos2022\BackendGI\GICoreInterfaces\obj\Debug\net7.0\ref\GICoreInterfaces.dll

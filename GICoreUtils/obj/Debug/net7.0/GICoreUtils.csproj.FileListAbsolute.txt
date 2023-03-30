@@ -1,0 +1,17 @@
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.csproj.AssemblyReference.cache
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.AssemblyInfoInputs.cache
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.AssemblyInfo.cs
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.csproj.CoreCompileInputs.cache
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreUtils.deps.json
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreUtils.dll
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreUtils.pdb
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreInterfaces.dll
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreModels.dll
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreInterfaces.pdb
+D:\Proyectos2022\BackendGI\GICoreUtils\bin\Debug\net7.0\GICoreModels.pdb
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.csproj.CopyComplete
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.dll
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\refint\GICoreUtils.dll
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\GICoreUtils.pdb
+D:\Proyectos2022\BackendGI\GICoreUtils\obj\Debug\net7.0\ref\GICoreUtils.dll
