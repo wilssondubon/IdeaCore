@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GICoreInterfaces.Presentation.API.Hateoas
+{
+    /// <summary>
+    /// lista de descriptores de endpoint {IEndpointDescriptor}
+    /// </summary>
+    public interface IEndpointDescriptorList : IList<IEndpointDescriptor>
+    {
+        /// <summary>
+        /// funcion para agregar un nuevo descriptor a la lista
+        /// </summary>
+        /// <param name="relacion">relacion del endpoint con el modelo</param>
+        /// <param name="accion">titulo del endpoint</param>
+        /// <param name="controlador">controlador al que pertenece el endpoint</param>
+        /// <param name="metodo">verbo del endpoint</param>
+        /// <param name="valores">tipo de funcion para llamada callback mediante el cual entra un modelo y retorna los campos que conforman una llave primaria</param>
+        void Add(string relacion, string accion, string controlador, string metodo, Func<object, object> valores = null);
+    }
+}
