@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Common.Response
+namespace IdeaCoreInterfaces.Aplication.Services.Common.Response
 {
     /// <summary>
     /// tracker para una respuesta

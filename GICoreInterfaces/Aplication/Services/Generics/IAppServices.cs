@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Aplication.Services.Common;
+﻿using IdeaCoreInterfaces.Aplication.Services.Common;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Generics
+namespace IdeaCoreInterfaces.Aplication.Services.Generics
 {
     /// <summary>
     /// contenedor de servicios genericos para la aplicacion

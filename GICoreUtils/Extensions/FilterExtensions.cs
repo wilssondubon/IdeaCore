@@ -1,4 +1,4 @@
-﻿using GICoreUtils.Accessor;
+﻿using IdeaCoreUtils.Accessor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Extensions
+namespace IdeaCoreUtils.Extensions
 {
     /// <summary>
     /// extensiones para obtener diferentes valores referentes a una consulta
@@ -46,10 +46,10 @@ namespace GICoreUtils.Extensions
         {
             IReadOnlyList<IProperty> primaryKeyProperties = dbContext.GetPrimaryKeyProperties<T>();
             ParameterExpression parameter = Expression.Parameter(typeof(T), "e");
-            Func<IProperty, int, BinaryExpression> selector = ((p, i) => Expression.Equal(Expression.Property(parameter, p.Name), Expression.Convert(Expression.PropertyOrField(Expression.Constant(new
+            Func<IProperty, int, BinaryExpression> selector = (p, i) => Expression.Equal(Expression.Property(parameter, p.Name), Expression.Convert(Expression.PropertyOrField(Expression.Constant(new
             {
                 id = Convert.ChangeType(new PropertyAccessor(o.GetType(), p.Name).GetValue(o), p.ClrType)
-            }), "id"), p.ClrType)));
+            }), "id"), p.ClrType));
             return Expression.Lambda<Func<T, bool>>(primaryKeyProperties.Select(selector).Aggregate(new Func<BinaryExpression, BinaryExpression, BinaryExpression>(Expression.AndAlso)), parameter);
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace GICoreUtils.Extensions
             }).Select(t => t.property).Where(t => t != null).Select((p, i) => Expression.Equal(Expression.Property(parameter, p.Name), Expression.Convert(Expression.PropertyOrField(Expression.Constant(
                 new
                 {
-                    id = Convert.ChangeType(filter.Where((t => t.Key.ToLower() == p.Name.ToLower())).Select((t => t.Value)).FirstOrDefault(), p.ClrType)
+                    id = Convert.ChangeType(filter.Where(t => t.Key.ToLower() == p.Name.ToLower()).Select(t => t.Value).FirstOrDefault(), p.ClrType)
                 }), "id"), p.ClrType))).Aggregate(new Func<BinaryExpression, BinaryExpression, BinaryExpression>(Expression.AndAlso)), parameter);
         }
         /// <summary>
@@ -113,7 +113,7 @@ namespace GICoreUtils.Extensions
         /// <returns>coleccion de consulta de la entidad</returns>
         public static IQueryable<TEntity> FilterByPrimaryKey<TEntity>(this DbSet<TEntity> dbSet, DbContext context, params object[] id) where TEntity : class
         {
-            return dbSet.AsQueryable().FilterByPrimaryKey<TEntity>(context, id);
+            return dbSet.AsQueryable().FilterByPrimaryKey(context, id);
         }
 
     }

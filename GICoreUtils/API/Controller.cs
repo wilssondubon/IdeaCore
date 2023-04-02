@@ -1,5 +1,5 @@
 ﻿using Azure.Core;
-using GICoreModels.Response;
+using IdeaCoreModels.Response;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.API
+namespace IdeaCoreUtils.API
 {
     /// <summary>
     /// controlador basico con funciones generales

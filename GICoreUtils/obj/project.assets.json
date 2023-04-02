@@ -1918,7 +1918,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "GICoreInterfaces/1.0.0": {
+      "IdeaCoreInterfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1927,23 +1927,23 @@
           "Microsoft.EntityFrameworkCore": "7.0.4"
         },
         "compile": {
-          "bin/placeholder/GICoreInterfaces.dll": {}
+          "bin/placeholder/IdeaCoreInterfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GICoreInterfaces.dll": {}
+          "bin/placeholder/IdeaCoreInterfaces.dll": {}
         }
       },
-      "GICoreModels/1.0.0": {
+      "IdeaCoreModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "GICoreInterfaces": "1.0.0"
+          "IdeaCoreInterfaces": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GICoreModels.dll": {}
+          "bin/placeholder/IdeaCoreModels.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GICoreModels.dll": {}
+          "bin/placeholder/IdeaCoreModels.dll": {}
         }
       }
     }
@@ -5817,22 +5817,22 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "GICoreInterfaces/1.0.0": {
+    "IdeaCoreInterfaces/1.0.0": {
       "type": "project",
-      "path": "../GICoreInterfaces/GICoreInterfaces.csproj",
-      "msbuildProject": "../GICoreInterfaces/GICoreInterfaces.csproj"
+      "path": "../GICoreInterfaces/IdeaCoreInterfaces.csproj",
+      "msbuildProject": "../GICoreInterfaces/IdeaCoreInterfaces.csproj"
     },
-    "GICoreModels/1.0.0": {
+    "IdeaCoreModels/1.0.0": {
       "type": "project",
-      "path": "../GICoreModels/GICoreModels.csproj",
-      "msbuildProject": "../GICoreModels/GICoreModels.csproj"
+      "path": "../GICoreModels/IdeaCoreModels.csproj",
+      "msbuildProject": "../GICoreModels/IdeaCoreModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
-      "GICoreInterfaces >= 1.0.0",
-      "GICoreModels >= 1.0.0",
+      "IdeaCoreInterfaces >= 1.0.0",
+      "IdeaCoreModels >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Microsoft.AspNetCore.Routing.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 7.0.4"
@@ -5847,11 +5847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos2022\\BackendGI\\GICoreUtils\\GICoreUtils.csproj",
-      "projectName": "GICoreUtils",
-      "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreUtils\\GICoreUtils.csproj",
+      "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreUtils\\IdeaCoreUtils.csproj",
+      "projectName": "IdeaCoreUtils",
+      "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreUtils\\IdeaCoreUtils.csproj",
       "packagesPath": "C:\\Users\\Analista.Programador\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos2022\\BackendGI\\GICoreUtils\\obj\\",
+      "outputPath": "D:\\Personales2023\\BackendIdea\\GICoreUtils\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -5870,17 +5870,18 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/gIntrosaApps/_packaging/GIntrosaFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj": {
-              "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj"
+            "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj": {
+              "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj"
             },
-            "D:\\Proyectos2022\\BackendGI\\GICoreModels\\GICoreModels.csproj": {
-              "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreModels\\GICoreModels.csproj"
+            "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj": {
+              "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj"
             }
           }
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Common.Response
+namespace IdeaCoreInterfaces.Aplication.Services.Common.Response
 {
     /// <summary>
     /// interfaz que define una respuesta para una lista paginada

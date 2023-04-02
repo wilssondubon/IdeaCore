@@ -1,6 +1,6 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Infraestructure.Repository;
-using GICoreUtils.Extensions;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Infraestructure.Repository;
+using IdeaCoreUtils.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInfraestructure.Repository
+namespace IdeaCoreInfraestructure.Repository
 {
     public partial class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {

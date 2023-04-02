@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Aplication.Models;
+﻿using IdeaCoreInterfaces.Aplication.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
@@ -9,7 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Infraestructure.Repository
+namespace IdeaCoreInterfaces.Infraestructure.Repository
 {
     /// <summary>
     /// interaz para un repositorio generico

@@ -1,6 +1,4 @@
-﻿using GICoreInfraestructure.Repository;
-using GICoreInterfaces.Infraestructure.Repository;
-using GICoreInterfaces.Infraestructure.UnitOfWork;
+﻿using IdeaCoreInfraestructure.Repository;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.EntityFrameworkCore;
@@ -11,8 +9,10 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreInterfaces.Infraestructure.Repository;
+using IdeaCoreInterfaces.Infraestructure.UnitOfWork;
 
-namespace GICoreInfraestructure.UnitOfWork
+namespace IdeaCoreInfraestructure.UnitOfWork
 {
     /// <summary>
     /// clase para la creacion de una unidad de trabajo para la infraestructura de la aplicacion
@@ -102,7 +102,7 @@ namespace GICoreInfraestructure.UnitOfWork
         public void Dispose()
         {
             Dispose(true);
-            GC.SuppressFinalize((object)this);
+            GC.SuppressFinalize(this);
         }
         /// <summary>
         /// funcion para ejecutar una solicitud a un procedimiento almacenado que no devuelva cualquier tipo de entidad, usa FromSqlRaw
@@ -154,7 +154,7 @@ namespace GICoreInfraestructure.UnitOfWork
         public virtual IQueryable<TEntity> Exec<TEntity>(string spName, SqlParameter[] parameters, Expression<Func<TEntity, bool>>? filter = null, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null, string includeProperties = "") where TEntity : class
         {
             DbSet<TEntity> source1 = dbcontext.Set<TEntity>();
-            FormattableString sql = FormattableStringFactory.Create("Exec {0} ", (object)spName);
+            FormattableString sql = FormattableStringFactory.Create("Exec {0} ", spName);
             IQueryable<TEntity> source2;
             if (parameters != null && parameters.Count() > 0)
             {

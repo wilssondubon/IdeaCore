@@ -7,11 +7,12 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using GICoreInterfaces.Aplication.Models;
-using GICoreModels.FilterQueryString;
-using GICoreModels.EnumerableClasses;
+using IdeaCoreModels.FilterQueryString;
+using IdeaCoreUtils.Extensions;
+using IdeaCoreModels.EnumerableClasses;
+using IdeaCoreInterfaces.Aplication.Models;
 
-namespace GICoreUtils.Extensions
+namespace IdeaCoreUtils.Extensions
 {
     /// <summary>
     /// extensiones para IQueryable
@@ -28,7 +29,7 @@ namespace GICoreUtils.Extensions
         /// <returns>coleccion de consulta</returns>
         public static IQueryable<TEntity> FilterByPrimaryKey<TEntity>(this IQueryable<TEntity> queryable, DbContext context, object[] id)
         {
-            return queryable.Where<TEntity>(context.FilterByPrimaryKeyPredicate<TEntity>(id));
+            return queryable.Where(context.FilterByPrimaryKeyPredicate<TEntity>(id));
         }
         /// <summary>
         /// filtra un objeto por su llave primaria teniendo el objeto completo
@@ -40,7 +41,7 @@ namespace GICoreUtils.Extensions
         /// <returns>coleccion de consulta</returns>
         public static IQueryable<TEntity> FilterByObjectWithPrimaryKey<TEntity>(this IQueryable<TEntity> queryable, DbContext context, object o)
         {
-            return queryable.Where<TEntity>(context.FilterByObjectWithPrimaryKeyPredicate<TEntity>(o));
+            return queryable.Where(context.FilterByObjectWithPrimaryKeyPredicate<TEntity>(o));
         }
         /// <summary>
         /// filtra un objeto basado en los valores de un diccionario de tipo nombre de la propiedad y valor de la propiedad

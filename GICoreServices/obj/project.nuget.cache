@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4qpzM9IRq90ugrTy5F7TVsR3fYz+4qAOolV5PVGxXMKYfvDGBfMExLFO4zymHA/rdC7ox4EwB1yVJxmxoI6h/g==",
+  "dgSpecHash": "VXkUjBZX4qamOdIrRiG/kz148fIrHbjGxtDBbXaRunZMeA9QaiPp+LTbzgoWtvzkDHkJ9ffHHBXnNYPKaJNF3w==",
   "success": true,
-  "projectFilePath": "D:\\Proyectos2022\\BackendGI\\GICoreServices\\GICoreServices.csproj",
+  "projectFilePath": "D:\\Personales2023\\BackendIdea\\GICoreServices\\IdeaCoreServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

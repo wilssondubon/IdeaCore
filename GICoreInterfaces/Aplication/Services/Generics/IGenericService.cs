@@ -1,14 +1,14 @@
-﻿using GICoreInterfaces.Aplication.Services.Common.FilterQueryString;
-using GICoreInterfaces.Aplication.Services.Common.Response;
-using GICoreInterfaces.Aplication.Services.Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreInterfaces.Aplication.Services.Common.Response;
+using IdeaCoreInterfaces.Aplication.Services.Common.FilterQueryString;
+using IdeaCoreInterfaces.Aplication.Services.Common;
 
-namespace GICoreInterfaces.Aplication.Services.Generics
+namespace IdeaCoreInterfaces.Aplication.Services.Generics
 {
     public interface IGenericService<Model, Entity> : ICommonService<Model, Entity> where Model : class where Entity : class
     {

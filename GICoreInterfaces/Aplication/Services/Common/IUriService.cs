@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Aplication.Models;
+﻿using IdeaCoreInterfaces.Aplication.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Common
+namespace IdeaCoreInterfaces.Aplication.Services.Common
 {
     /// <summary>
     /// interfaz para el servicio que se conectara al httpcontext de una peticion

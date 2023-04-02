@@ -1,12 +1,12 @@
-﻿using GICoreInterfaces.Infraestructure.Repository;
-using GICoreInterfaces.Infraestructure.UnitOfWork;
+﻿using IdeaCoreInterfaces.Infraestructure.Repository;
+using IdeaCoreInterfaces.Infraestructure.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Extensions
+namespace IdeaCoreUtils.Extensions
 {
     /// <summary>
     /// extensiones para la unidad de trabajo

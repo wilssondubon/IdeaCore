@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Infraestructure.Repository;
+﻿using IdeaCoreInterfaces.Infraestructure.Repository;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Infraestructure.UnitOfWork
+namespace IdeaCoreInterfaces.Infraestructure.UnitOfWork
 {
     /// <summary>
     /// interfaz para la creacion de una unidad de trabajo para la infraestructura de la aplicacion

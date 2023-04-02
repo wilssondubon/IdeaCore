@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RagOCz2jGOafM0rd77UMbf8V9W8fEJQ4phgi9hEY43ziozh5MmNdwP4fYG8ibvBv4XPP20BRIToMhRpo0K/BKQ==",
+  "dgSpecHash": "TVKjiK8/i+mfzzxs8V0/VIYYkfz9XfiXWic+6hsC8gi1LUwjioG5XeqOexUKs1SySppc09LQ13q7it32X6LCvw==",
   "success": true,
-  "projectFilePath": "D:\\Proyectos2022\\BackendGI\\GICoreModels\\GICoreModels.csproj",
+  "projectFilePath": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

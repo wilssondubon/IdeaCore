@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GICoreInterfaces\GICoreInterfaces.csproj" />
-    <ProjectReference Include="..\GICoreUtils\GICoreUtils.csproj" />
+    <ProjectReference Include="..\GICoreInterfaces\IdeaCoreInterfaces.csproj" />
+    <ProjectReference Include="..\GICoreUtils\IdeaCoreUtils.csproj" />
   </ItemGroup>
 
 </Project>

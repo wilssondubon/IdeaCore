@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Infraestructure.Repository
+namespace IdeaCoreInterfaces.Infraestructure.Repository
 {
     /// <summary>
     /// interfaz para una clase que contiene un diccionario de repositorios

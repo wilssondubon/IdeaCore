@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Attributes
+namespace IdeaCoreUtils.Attributes
 {
     /// <summary>
     /// atributo que define si una propiedad debe obtener un nuevo valor a la hora de una operacion de update

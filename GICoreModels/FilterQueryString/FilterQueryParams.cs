@@ -1,12 +1,12 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common.FilterQueryString;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Services.Common.FilterQueryString;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreModels.FilterQueryString
+namespace IdeaCoreModels.FilterQueryString
 {
     /// <summary>
     /// Parametros completos para paginacion y ordenamiento
@@ -19,9 +19,9 @@ namespace GICoreModels.FilterQueryString
         public string OrderBy { get; set; }
         public FilterQueryParams() : base()
         {
-            this.PageNumber = 1;
-            this.PageSize = 50;
-            this.OrderBy = "";
+            PageNumber = 1;
+            PageSize = 50;
+            OrderBy = "";
         }
         /// <summary>
         /// inicializa los valores del filtro
@@ -30,7 +30,7 @@ namespace GICoreModels.FilterQueryString
         /// <param name="pageSize">cantidad de registros que se contienen en la pagina</param>
         public FilterQueryParams(int pageNumber, int pageSize) : base(pageNumber, pageSize)
         {
-            this.OrderBy = "";
+            OrderBy = "";
         }
         /// <summary>
         /// inicializa los valores del filtro
@@ -40,7 +40,7 @@ namespace GICoreModels.FilterQueryString
         /// <param name="orderby">campos sobre los que se ordenara el resultado</param>
         public FilterQueryParams(int pageNumber, int pageSize, string orderby) : base(pageNumber, pageSize)
         {
-            this.OrderBy = orderby;
+            OrderBy = orderby;
         }
     }
 }

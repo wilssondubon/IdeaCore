@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Presentation.API.Hateoas;
+﻿using IdeaCoreInterfaces.Presentation.API.Hateoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Hateoas
+namespace IdeaCoreUtils.Hateoas
 {
     /// <summary>
     /// lista de descriptores de endpoint {IEndpointDescriptor}
@@ -26,7 +26,7 @@ namespace GICoreUtils.Hateoas
         /// <param name="valores">tipo de funcion para llamada callback mediante el cual entra un modelo y retorna los campos que conforman una llave primaria</param>
         public void Add(string relacion, string accion, string controlador, string metodo, Func<object, object> valores = null)
         {
-            this.Add(new EndpointDescriptor(relacion, accion, controlador, metodo, valores));
+            Add(new EndpointDescriptor(relacion, accion, controlador, metodo, valores));
         }
     }
 }

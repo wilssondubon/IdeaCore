@@ -1,0 +1,15 @@
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.csproj.AssemblyReference.cache
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.AssemblyInfoInputs.cache
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.AssemblyInfo.cs
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.csproj.CoreCompileInputs.cache
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.deps.json
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.pdb
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreInterfaces.dll
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreInterfaces.pdb
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.csproj.CopyComplete
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\refint\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.pdb
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\ref\IdeaCoreModels.dll

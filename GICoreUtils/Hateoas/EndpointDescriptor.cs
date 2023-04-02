@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Presentation.API.Hateoas;
+﻿using IdeaCoreInterfaces.Presentation.API.Hateoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Hateoas
+namespace IdeaCoreUtils.Hateoas
 {
     /// <summary>
     /// clase para describir las propiedades de un endpoint en particular

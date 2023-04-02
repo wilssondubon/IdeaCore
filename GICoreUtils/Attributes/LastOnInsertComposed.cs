@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Attributes
+namespace IdeaCoreUtils.Attributes
 {
     /// <summary>
     /// atributo que define si el valor de una propiedad de un modelo debe definirse con el valor maximo + Skip tomando alguna otra propiedad

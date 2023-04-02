@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Attributes
+namespace IdeaCoreUtils.Attributes
 {
     /// <summary>
     /// atributo que indica si un modelo debe descartar sus propiedades de navegacion ante una operacion de insercion o modificacion

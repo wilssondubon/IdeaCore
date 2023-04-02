@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Attributes
+namespace IdeaCoreUtils.Attributes
 {
     /// <summary>
     /// atributo que define si una propiedad debe ser tomada en cuenta a la hora de calcular un maximo para otra propiedad 

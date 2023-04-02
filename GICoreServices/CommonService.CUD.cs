@@ -1,13 +1,13 @@
-﻿using GICoreInterfaces.Aplication.Services.Common.Response;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreUtils.Accessor;
-using GICoreUtils.Attributes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreUtils.Attributes;
+using IdeaCoreUtils.Accessor;
+using IdeaCoreInterfaces.Aplication.Services.Common.Response;
+using IdeaCoreInterfaces.Aplication.Services.Common;
 
 namespace GICoreServices
 {

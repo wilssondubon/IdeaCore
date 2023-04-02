@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Aplication.Services.Common;
+﻿using IdeaCoreInterfaces.Aplication.Services.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.API
+namespace IdeaCoreUtils.API
 {
     /// <summary>
     /// controlador basico con funciones de Create, Update y Delete

@@ -1,6 +1,6 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common.FilterQueryString;
-using GICoreInterfaces.Aplication.Services.Common.Response;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Services.Common.FilterQueryString;
+using IdeaCoreInterfaces.Aplication.Services.Common.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Common
+namespace IdeaCoreInterfaces.Aplication.Services.Common
 {
     /// <summary>
     /// interfaz para un servicio de operaciones Read

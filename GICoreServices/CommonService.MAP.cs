@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreUtils.Accessor;
+using IdeaCoreInterfaces.Aplication.Services.Common;
+using IdeaCoreUtils.Accessor;
 using System;
 using System.Collections.Generic;
 using System.Linq;

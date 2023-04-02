@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Aplication.Models.Hateoas;
+﻿using IdeaCoreInterfaces.Aplication.Models.Hateoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Hateoas
+namespace IdeaCoreUtils.Hateoas
 {
     /// <summary>
     /// clase de un modelo de link hateos

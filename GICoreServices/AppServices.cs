@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreInterfaces.Aplication.Services.Generics;
-using GICoreInterfaces.Infraestructure.UnitOfWork;
+using GICoreServices;
+using IdeaCoreInterfaces.Aplication.Services.Common;
+using IdeaCoreInterfaces.Aplication.Services.Generics;
+using IdeaCoreInterfaces.Infraestructure.UnitOfWork;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreServices
+namespace IdeaCoreServices
 {
     /// <summary>
     /// contenedor de servicios genericos para la aplicacion

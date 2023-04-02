@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Attributes
+namespace IdeaCoreUtils.Attributes
 {
     /// <summary>
     /// atributo para controlar si un campo de un modelo requerira definirse con valor de fecha actual a la hora de una operacion de insercion

@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Aplication.Models;
+﻿using IdeaCoreInterfaces.Aplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreModels.FilterQueryString
+namespace IdeaCoreModels.FilterQueryString
 {
     /// <summary>
     /// clase para definir los valores de paginacion
@@ -27,8 +27,8 @@ namespace GICoreModels.FilterQueryString
         /// </summary>
         public PaginationFilter()
         {
-            this.PageNumber = 1;
-            this.PageSize = 50;
+            PageNumber = 1;
+            PageSize = 50;
         }
         /// <summary>
         /// inicializa los valores de paginacion
@@ -37,8 +37,8 @@ namespace GICoreModels.FilterQueryString
         /// <param name="pageSize">cantidad de registros que se contienen en la pagina</param>
         public PaginationFilter(int pageNumber, int pageSize)
         {
-            this.PageNumber = pageNumber < 1 ? 1 : pageNumber;
-            this.PageSize = pageSize;
+            PageNumber = pageNumber < 1 ? 1 : pageNumber;
+            PageSize = pageSize;
         }
     }
 }

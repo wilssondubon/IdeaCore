@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Accessor
+namespace IdeaCoreUtils.Accessor
 {
     /// <summary>
     /// clase para ayudar a acceder dinamicamente a una propiedad de un objeto
@@ -16,11 +16,11 @@ namespace GICoreUtils.Accessor
         /// <summary>
         /// tipo del delegado para definir nuevo valor a una propiedad
         /// </summary>
-        private PropertyAccessor.SetValueHandler setValueHandler;
+        private SetValueHandler setValueHandler;
         /// <summary>
         /// tipo del delegado para obtener el valor de una propiedad
         /// </summary>
-        private PropertyAccessor.GetValueHandler getValueHandler;
+        private GetValueHandler getValueHandler;
         /// <summary>
         /// inicializa la clase con el tipo del objeto y el nombre de la propiedad a acceder
         /// </summary>
@@ -30,17 +30,17 @@ namespace GICoreUtils.Accessor
         {
             PropertyInfo property = ownerType.GetProperty(propertyName);
             if (property.CanRead)
-                this.getValueHandler = this.CreateGetValueHandler(property);
+                getValueHandler = CreateGetValueHandler(property);
             if (!property.CanWrite)
                 return;
-            this.setValueHandler = this.CreateSetValueHandler(property);
+            setValueHandler = CreateSetValueHandler(property);
         }
         /// <summary>
         /// crea un delegado para obtener el valor de la propiedad
         /// </summary>
         /// <param name="propertyInfo">informacion reflectiva de la propiedad</param>
         /// <returns>delegado</returns>
-        protected virtual PropertyAccessor.GetValueHandler CreateGetValueHandler(
+        protected virtual GetValueHandler CreateGetValueHandler(
           PropertyInfo propertyInfo)
         {
             MethodInfo getMethod = propertyInfo.GetGetMethod();
@@ -55,7 +55,7 @@ namespace GICoreUtils.Accessor
             if (returnType.IsValueType)
                 ilGenerator.Emit(OpCodes.Box, returnType);
             ilGenerator.Emit(OpCodes.Ret);
-            return dynamicMethod.CreateDelegate(typeof(PropertyAccessor.GetValueHandler)) as PropertyAccessor.GetValueHandler;
+            return dynamicMethod.CreateDelegate(typeof(GetValueHandler)) as GetValueHandler;
         }
         /// <summary>
         /// obtiene el valor de la propiedad
@@ -65,16 +65,16 @@ namespace GICoreUtils.Accessor
         /// <exception cref="InvalidOperationException">devuelve error si no hay un delegado para obtener el valor de la propiedad  o no esta inicializado</exception>
         public object GetValue(object component)
         {
-            if (this.getValueHandler == null)
+            if (getValueHandler == null)
                 throw new InvalidOperationException();
-            return this.getValueHandler(component);
+            return getValueHandler(component);
         }
         /// <summary>
         /// crea un delegado para definir el valor de la propiedad
         /// </summary>
         /// <param name="propertyInfo">informacion reflectiva de la propiedad</param>
         /// <returns>delegado</returns>
-        protected virtual PropertyAccessor.SetValueHandler CreateSetValueHandler(
+        protected virtual SetValueHandler CreateSetValueHandler(
       PropertyInfo propertyInfo)
         {
             MethodInfo setMethod = propertyInfo.GetSetMethod(false);
@@ -91,7 +91,7 @@ namespace GICoreUtils.Accessor
                 ilGenerator.Emit(OpCodes.Unbox_Any, parameterType);
             ilGenerator.Emit(OpCodes.Call, setMethod);
             ilGenerator.Emit(OpCodes.Ret);
-            return dynamicMethod.CreateDelegate(typeof(SetValueHandler)) as PropertyAccessor.SetValueHandler;
+            return dynamicMethod.CreateDelegate(typeof(SetValueHandler)) as SetValueHandler;
         }
         /// <summary>
         /// define el valor de la propiedad
@@ -101,9 +101,9 @@ namespace GICoreUtils.Accessor
         /// <exception cref="InvalidOperationException">devuelve error si no hay un delegado para definir el valor de la propiedad o no esta inicializado</exception>
         public void SetValue(object component, object value)
         {
-            if (this.setValueHandler == null)
+            if (setValueHandler == null)
                 throw new InvalidOperationException();
-            this.setValueHandler(component, value);
+            setValueHandler(component, value);
         }
         /// <summary>
         /// delegado para definir el valor de la propiedad

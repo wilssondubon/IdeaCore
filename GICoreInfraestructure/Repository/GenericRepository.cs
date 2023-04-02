@@ -1,4 +1,4 @@
-﻿using GICoreInterfaces.Infraestructure.Repository;
+﻿using IdeaCoreInterfaces.Infraestructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInfraestructure.Repository
+namespace IdeaCoreInfraestructure.Repository
 {
     /// <summary>
     /// clase para un repositorio generico

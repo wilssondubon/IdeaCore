@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Utils
+namespace IdeaCoreUtils.Utils
 {
     /// <summary>
     /// ExpressionVisitor para lambdas, convierte entre predicados de una clase a predicado de otra clase
@@ -41,7 +41,7 @@ namespace GICoreUtils.Utils
         protected override Expression VisitLambda<T>(Expression<T> node)
         {
             if (!(typeof(T) == typeof(Func<TInput, bool>)))
-                return base.VisitLambda<T>(node);
+                return base.VisitLambda(node);
             replaceParam = Expression.Parameter(typeof(TOutput), "p");
             return Expression.Lambda<Func<TOutput, bool>>(Visit(node.Body), replaceParam);
         }
@@ -61,10 +61,10 @@ namespace GICoreUtils.Utils
         {
             if (!(node.Member.DeclaringType == typeof(TInput)))
                 return base.VisitMember(node);
-            MemberInfo? member = ((IEnumerable<MemberInfo>)typeof(TOutput).GetMember(node.Member.Name, BindingFlags.Instance | BindingFlags.Public)).FirstOrDefault();
+            MemberInfo? member = typeof(TOutput).GetMember(node.Member.Name, BindingFlags.Instance | BindingFlags.Public).FirstOrDefault();
             if (member == null)
                 throw new InvalidOperationException("Cannot identify corresponding member of DataObject");
-            return Expression.MakeMemberAccess(this.Visit(node.Expression), member);
+            return Expression.MakeMemberAccess(Visit(node.Expression), member);
         }
     }
 }

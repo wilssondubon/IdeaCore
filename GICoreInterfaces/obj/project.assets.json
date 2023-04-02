@@ -2575,11 +2575,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj",
-      "projectName": "GICoreInterfaces",
-      "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj",
+      "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj",
+      "projectName": "IdeaCoreInterfaces",
+      "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj",
       "packagesPath": "C:\\Users\\Analista.Programador\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\obj\\",
+      "outputPath": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2598,7 +2598,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/gIntrosaApps/_packaging/GIntrosaFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {

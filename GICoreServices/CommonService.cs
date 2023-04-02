@@ -1,19 +1,19 @@
 ﻿using AutoMapper;
-using GICoreInterfaces.Aplication.Models.Hateoas;
-using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common.Response;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreInterfaces.Infraestructure.Repository;
-using GICoreInterfaces.Infraestructure.UnitOfWork;
-using GICoreModels.FilterQueryString;
-using GICoreModels.Response;
-using GICoreUtils.Hateoas;
+using IdeaCoreModels.FilterQueryString;
+using IdeaCoreModels.Response;
+using IdeaCoreUtils.Hateoas;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreInterfaces.Aplication.Services.Common;
+using IdeaCoreInterfaces.Aplication.Services.Common.Response;
+using IdeaCoreInterfaces.Infraestructure.UnitOfWork;
+using IdeaCoreInterfaces.Infraestructure.Repository;
+using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Models.Hateoas;
 
 namespace GICoreServices
 {

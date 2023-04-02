@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Infraestructure.Repository;
+﻿using IdeaCoreInterfaces.Infraestructure.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInfraestructure.Repository
+namespace IdeaCoreInfraestructure.Repository
 {
     /// <summary>
     /// clase para una clase que contiene un diccionario de repositorios

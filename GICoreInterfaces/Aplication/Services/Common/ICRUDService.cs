@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Services.Common
+namespace IdeaCoreInterfaces.Aplication.Services.Common
 {
     /// <summary>
     /// Interfaz para la creacion de un servicio con operacion de tipo CRUD

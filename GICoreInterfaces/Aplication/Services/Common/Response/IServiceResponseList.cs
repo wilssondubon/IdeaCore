@@ -1,12 +1,12 @@
-﻿using GICoreInterfaces.Aplication.Models.Hateoas;
-using GICoreInterfaces.Aplication.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Models.Hateoas;
 
-namespace GICoreInterfaces.Aplication.Services.Common.Response
+namespace IdeaCoreInterfaces.Aplication.Services.Common.Response
 {
     /// <summary>
     /// interfaz de respuesta de un servicio que devuelve una lista

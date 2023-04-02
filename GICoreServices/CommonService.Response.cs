@@ -1,6 +1,6 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreModels.Response;
-using GICoreUtils.Extensions;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreModels.Response;
+using IdeaCoreUtils.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

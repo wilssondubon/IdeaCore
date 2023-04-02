@@ -1,5 +1,6 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common.FilterQueryString;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Services.Common.FilterQueryString;
+using IdeaCoreUtils.API;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

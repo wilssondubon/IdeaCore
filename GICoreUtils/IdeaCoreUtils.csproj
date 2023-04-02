@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GICoreInterfaces\GICoreInterfaces.csproj" />
-    <ProjectReference Include="..\GICoreModels\GICoreModels.csproj" />
+    <ProjectReference Include="..\GICoreInterfaces\IdeaCoreInterfaces.csproj" />
+    <ProjectReference Include="..\GICoreModels\IdeaCoreModels.csproj" />
   </ItemGroup>
 
 </Project>

@@ -941,7 +941,7 @@
           }
         }
       },
-      "GICoreInterfaces/1.0.0": {
+      "IdeaCoreInterfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -950,10 +950,10 @@
           "Microsoft.EntityFrameworkCore": "7.0.4"
         },
         "compile": {
-          "bin/placeholder/GICoreInterfaces.dll": {}
+          "bin/placeholder/IdeaCoreInterfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GICoreInterfaces.dll": {}
+          "bin/placeholder/IdeaCoreInterfaces.dll": {}
         }
       }
     }
@@ -2573,15 +2573,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "GICoreInterfaces/1.0.0": {
+    "IdeaCoreInterfaces/1.0.0": {
       "type": "project",
-      "path": "../GICoreInterfaces/GICoreInterfaces.csproj",
-      "msbuildProject": "../GICoreInterfaces/GICoreInterfaces.csproj"
+      "path": "../GICoreInterfaces/IdeaCoreInterfaces.csproj",
+      "msbuildProject": "../GICoreInterfaces/IdeaCoreInterfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "GICoreInterfaces >= 1.0.0"
+      "IdeaCoreInterfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2593,11 +2593,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Proyectos2022\\BackendGI\\GICoreModels\\GICoreModels.csproj",
-      "projectName": "GICoreModels",
-      "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreModels\\GICoreModels.csproj",
+      "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
+      "projectName": "IdeaCoreModels",
+      "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
       "packagesPath": "C:\\Users\\Analista.Programador\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyectos2022\\BackendGI\\GICoreModels\\obj\\",
+      "outputPath": "D:\\Personales2023\\BackendIdea\\GICoreModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2616,14 +2616,15 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://pkgs.dev.azure.com/gIntrosaApps/_packaging/GIntrosaFeed/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj": {
-              "projectPath": "D:\\Proyectos2022\\BackendGI\\GICoreInterfaces\\GICoreInterfaces.csproj"
+            "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj": {
+              "projectPath": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj"
             }
           }
         }

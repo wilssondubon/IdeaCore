@@ -1,8 +1,4 @@
 ﻿using AutoMapper;
-using GICoreInterfaces.Aplication.Models.Hateoas;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreInterfaces.Presentation.API.Hateoas;
-using GICoreUtils.Hateoas;
 using Microsoft.AspNetCore.Routing;
 using System;
 using System.Collections.Generic;
@@ -11,8 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
+using IdeaCoreInterfaces.Aplication.Services.Common;
+using IdeaCoreInterfaces.Presentation.API.Hateoas;
+using IdeaCoreInterfaces.Aplication.Models.Hateoas;
 
-namespace GICoreUtils.Hateoas
+namespace IdeaCoreUtils.Hateoas
 {
     /// <summary>
     /// mappping action de automapper basada en una entidad y un modelo

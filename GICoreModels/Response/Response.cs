@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Aplication.Services.Common.Response;
+﻿using IdeaCoreInterfaces.Aplication.Services.Common.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreModels.Response
+namespace IdeaCoreModels.Response
 {
     /// <summary>
     /// respuesta basica para un solicitud basado en un tipo de modelo
@@ -65,7 +65,7 @@ namespace GICoreModels.Response
         public Response(ITrackerResponse t)
         {
             TrackerResponse = t;
-            Item1 = default(T);
+            Item1 = default;
         }
         /// <summary>
         /// inicializa una respuesta de error
@@ -77,7 +77,7 @@ namespace GICoreModels.Response
         public Response(short code, string error, string[]? errors, bool succeded)
         {
             TrackerResponse = new TrackerResponse(code, error, errors, succeded);
-            Item1 = default(T);
+            Item1 = default;
         }
         /// <summary>
         /// inicializa una respuesta con un tracker por default codigo 200 y mensaje OK
@@ -86,7 +86,7 @@ namespace GICoreModels.Response
         public Response(T o)
         {
             Item1 = o;
-            TrackerResponse = new TrackerResponse((short)200, "OK");
+            TrackerResponse = new TrackerResponse(200, "OK");
         }
         /// <summary>
         /// inicializa una respuesta con valores default nuevos
@@ -94,7 +94,7 @@ namespace GICoreModels.Response
         public Response()
         {
             TrackerResponse = null;
-            Item1 = default(T);
+            Item1 = default;
         }
     }
 }

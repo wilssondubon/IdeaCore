@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Presentation.API.Hateoas
+namespace IdeaCoreInterfaces.Presentation.API.Hateoas
 {
     /// <summary>
     /// lista de descriptores de endpoint {IEndpointDescriptor}

@@ -1,4 +1,5 @@
-﻿using GICoreInterfaces.Aplication.Services.Common;
+﻿using IdeaCoreInterfaces.Aplication.Services.Common;
+using IdeaCoreUtils.API;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

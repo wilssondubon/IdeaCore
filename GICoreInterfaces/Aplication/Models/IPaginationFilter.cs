@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreInterfaces.Aplication.Models
+namespace IdeaCoreInterfaces.Aplication.Models
 {
     /// <summary>
     /// interfaz para definir los valores de paginacion

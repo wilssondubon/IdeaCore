@@ -1,11 +1,11 @@
-﻿using GICoreInterfaces.Presentation.API.Hateoas;
+﻿using IdeaCoreInterfaces.Presentation.API.Hateoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreUtils.Hateoas
+namespace IdeaCoreUtils.Hateoas
 {
     /// <summary>
     /// clase para un diccionario de tipo: tipo del modelo y descripciones de sus endpoints

@@ -1,14 +1,14 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common.FilterQueryString;
-using GICoreInterfaces.Aplication.Services.Common.Response;
-using GICoreInterfaces.Aplication.Services.Common;
-using GICoreUtils.Utils;
+﻿using IdeaCoreUtils.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreInterfaces.Aplication.Services.Common.Response;
+using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Services.Common.FilterQueryString;
+using IdeaCoreInterfaces.Aplication.Services.Common;
 
 namespace GICoreServices
 {

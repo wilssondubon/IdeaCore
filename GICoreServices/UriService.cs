@@ -1,5 +1,5 @@
-﻿using GICoreInterfaces.Aplication.Models;
-using GICoreInterfaces.Aplication.Services.Common;
+﻿using IdeaCoreInterfaces.Aplication.Models;
+using IdeaCoreInterfaces.Aplication.Services.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Primitives;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GICoreServices
+namespace IdeaCoreServices
 {
     /// <summary>
     /// clase para el servicio que se conectara al httpcontext de una peticion
