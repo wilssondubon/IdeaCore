@@ -1,0 +1,17 @@
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreUtils.deps.json
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreUtils.dll
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreUtils.pdb
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreInterfaces.dll
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreInterfaces.pdb
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Release\net7.0\IdeaCoreModels.pdb
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.csproj.AssemblyReference.cache
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.AssemblyInfoInputs.cache
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.AssemblyInfo.cs
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.csproj.CoreCompileInputs.cache
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.csproj.CopyComplete
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.dll
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\refint\IdeaCoreUtils.dll
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\IdeaCoreUtils.pdb
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Release\net7.0\ref\IdeaCoreUtils.dll

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>IdeaCoreModels</id>
+    <version>1.0.0</version>
+    <authors>IdeaCoreModels</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net7.0">
+        <dependency id="IdeaCoreInterfaces" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.dll" target="lib\net7.0\IdeaCoreModels.dll" />
+  </files>
+</package>
