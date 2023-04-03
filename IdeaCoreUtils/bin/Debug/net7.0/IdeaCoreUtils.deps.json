@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "IdeaCoreUtils/1.0.9": {
+        "runtime": {
+          "IdeaCoreUtils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IdeaCoreUtils/1.0.9": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

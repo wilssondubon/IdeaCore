@@ -10,3 +10,8 @@ D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.d
 D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\refint\IdeaCoreHateoas.dll
 D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.pdb
 D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\ref\IdeaCoreHateoas.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreInterfaces.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreInterfaces.pdb
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.csproj.CopyComplete
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreModels.pdb

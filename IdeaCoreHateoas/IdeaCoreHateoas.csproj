@@ -4,13 +4,11 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <AssemblyVersion>1.0.8</AssemblyVersion>
-    <FileVersion>1.0.8</FileVersion>
-    <Version>1.0.8</Version>
+    <Version>1.0.9</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +18,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Routing.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdeaCoreInterfaces\IdeaCoreInterfaces.csproj" />
+    <ProjectReference Include="..\IdeaCoreModels\IdeaCoreModels.csproj" />
   </ItemGroup>
 
 </Project>

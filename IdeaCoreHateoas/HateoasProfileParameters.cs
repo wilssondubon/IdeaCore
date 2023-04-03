@@ -1,4 +1,4 @@
-﻿using IdeaCoreHateoas.Contracts;
+﻿using IdeaCoreInterfaces.Hateoas;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using System;

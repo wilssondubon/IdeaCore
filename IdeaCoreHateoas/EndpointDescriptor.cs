@@ -1,4 +1,4 @@
-﻿using IdeaCoreHateoas.Contracts;
+﻿using IdeaCoreInterfaces.Hateoas;
 using System;
 using System.Collections.Generic;
 using System.Linq;

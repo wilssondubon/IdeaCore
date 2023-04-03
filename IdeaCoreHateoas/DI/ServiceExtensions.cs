@@ -1,5 +1,4 @@
-﻿using IdeaCoreHateoas.Contracts;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -9,6 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using IdeaCoreInterfaces.Hateoas;
 
 namespace IdeaCoreHateoas.DI
 {

@@ -1,5 +1,4 @@
-﻿using IdeaCoreHateoas.Contracts;
-using Microsoft.AspNetCore.Routing;
+﻿using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
@@ -8,6 +7,8 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.Net.Http.Headers;
+using IdeaCoreInterfaces.Hateoas;
+using IdeaCoreModels;
 
 namespace IdeaCoreHateoas
 {
