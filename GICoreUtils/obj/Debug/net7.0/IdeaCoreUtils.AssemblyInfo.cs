@@ -13,11 +13,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("IdeaCoreUtils")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.6")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.7")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("IdeaCoreUtils")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IdeaCoreUtils")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.6")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.7")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 
