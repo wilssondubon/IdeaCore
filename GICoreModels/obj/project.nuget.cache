@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sqo0ZHPN0TjnkZfgYopoQtsdcQejBrnR1HopSIPd1IJKk50W9+N8qdWqmR7U93tsSJDFTZxvlmTd/fzTfqJxEg==",
+  "dgSpecHash": "K7RSfdFbStjUkNlKWC1vwHD5y1p+MMTPM6FOEqQQ7rPT8x2XDtFs1rmlCfkMMecHY1CiMS20ZpOgQjOGe13m2w==",
   "success": true,
   "projectFilePath": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
   "expectedPackageFiles": [
@@ -113,8 +113,7 @@
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\Analista.Programador\\.nuget\\packages\\ideacoreinterfaces\\1.0.0\\ideacoreinterfaces.1.0.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": []
 }

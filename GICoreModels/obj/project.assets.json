@@ -1931,7 +1931,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "IdeaCoreHateoas/1.0.0": {
+      "IdeaCoreHateoas/1.0.8": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1949,11 +1949,11 @@
           "bin/placeholder/IdeaCoreHateoas.dll": {}
         }
       },
-      "IdeaCoreInterfaces/1.0.0": {
+      "IdeaCoreInterfaces/1.0.8": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "IdeaCoreHateoas": "1.0.0",
+          "IdeaCoreHateoas": "1.0.8",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Data.SqlClient": "5.1.1",
           "Microsoft.EntityFrameworkCore": "7.0.4"
@@ -5850,12 +5850,12 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "IdeaCoreHateoas/1.0.0": {
+    "IdeaCoreHateoas/1.0.8": {
       "type": "project",
       "path": "../IdeaCoreHateoas/IdeaCoreHateoas.csproj",
       "msbuildProject": "../IdeaCoreHateoas/IdeaCoreHateoas.csproj"
     },
-    "IdeaCoreInterfaces/1.0.0": {
+    "IdeaCoreInterfaces/1.0.8": {
       "type": "project",
       "path": "../GICoreInterfaces/IdeaCoreInterfaces.csproj",
       "msbuildProject": "../GICoreInterfaces/IdeaCoreInterfaces.csproj"
@@ -5863,7 +5863,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "IdeaCoreInterfaces >= 1.0.0"
+      "IdeaCoreInterfaces >= 1.0.8"
     ]
   },
   "packageFolders": {
@@ -5873,7 +5873,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.8",
     "restore": {
       "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
       "projectName": "IdeaCoreModels",

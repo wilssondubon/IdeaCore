@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreInterfaces\\IdeaCoreInterfaces.csproj",
         "projectName": "IdeaCoreInterfaces",
@@ -88,7 +88,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreModels\\IdeaCoreModels.csproj",
         "projectName": "IdeaCoreModels",
@@ -157,7 +157,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\GICoreServices\\IdeaCoreServices.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreServices\\IdeaCoreServices.csproj",
         "projectName": "IdeaCoreServices",
@@ -229,7 +229,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\GICoreUtils\\IdeaCoreUtils.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\GICoreUtils\\IdeaCoreUtils.csproj",
         "projectName": "IdeaCoreUtils",
@@ -319,7 +319,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\IdeaCoreHateoas\\IdeaCoreHateoas.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.8",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreHateoas\\IdeaCoreHateoas.csproj",
         "projectName": "IdeaCoreHateoas",
