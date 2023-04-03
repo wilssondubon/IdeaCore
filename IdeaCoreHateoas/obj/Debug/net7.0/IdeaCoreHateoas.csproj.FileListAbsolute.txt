@@ -1,0 +1,12 @@
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreHateoas.deps.json
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreHateoas.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\bin\Debug\net7.0\IdeaCoreHateoas.pdb
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.csproj.AssemblyReference.cache
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.AssemblyInfoInputs.cache
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.AssemblyInfo.cs
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.csproj.CoreCompileInputs.cache
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\refint\IdeaCoreHateoas.dll
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\IdeaCoreHateoas.pdb
+D:\Personales2023\BackendIdea\IdeaCoreHateoas\obj\Debug\net7.0\ref\IdeaCoreHateoas.dll
