@@ -13,3 +13,5 @@ D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.dll
 D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\refint\IdeaCoreModels.dll
 D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.pdb
 D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\ref\IdeaCoreModels.dll
+D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.xml
+D:\Personales2023\BackendIdea\GICoreModels\obj\Debug\net7.0\IdeaCoreModels.xml

@@ -17,3 +17,7 @@ D:\Personales2023\BackendIdea\GICoreInfraestructure\obj\Debug\net7.0\IdeaCoreInf
 D:\Personales2023\BackendIdea\GICoreInfraestructure\obj\Debug\net7.0\refint\IdeaCoreInfraestructure.dll
 D:\Personales2023\BackendIdea\GICoreInfraestructure\obj\Debug\net7.0\IdeaCoreInfraestructure.pdb
 D:\Personales2023\BackendIdea\GICoreInfraestructure\obj\Debug\net7.0\ref\IdeaCoreInfraestructure.dll
+D:\Personales2023\BackendIdea\GICoreInfraestructure\bin\Debug\net7.0\IdeaCoreInfraestructure.xml
+D:\Personales2023\BackendIdea\GICoreInfraestructure\bin\Debug\net7.0\IdeaCoreUtils.xml
+D:\Personales2023\BackendIdea\GICoreInfraestructure\bin\Debug\net7.0\IdeaCoreModels.xml
+D:\Personales2023\BackendIdea\GICoreInfraestructure\obj\Debug\net7.0\IdeaCoreInfraestructure.xml

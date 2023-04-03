@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdeaCoreModels</name>
+    </assembly>
+    <members>
+        <member name="T:IdeaCoreModels.FilterQueryString.FilterQueryParams">
+            <summary>
+            Parametros completos para paginacion y ordenamiento
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.FilterQueryString.FilterQueryParams.OrderBy">
+            <summary>
+            los nombres de los campos por los que se ordenara la respuesta y su orden --desc-- --asc--
+            </summary>
+        </member>
+        <member name="M:IdeaCoreModels.FilterQueryString.FilterQueryParams.#ctor(System.Int32,System.Int32)">
+            <summary>
+            inicializa los valores del filtro
+            </summary>
+            <param name="pageNumber">numero de pagina que se quiere consultar</param>
+            <param name="pageSize">cantidad de registros que se contienen en la pagina</param>
+        </member>
+        <member name="M:IdeaCoreModels.FilterQueryString.FilterQueryParams.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            inicializa los valores del filtro
+            </summary>
+            <param name="pageNumber">numero de pagina que se quiere consultar</param>
+            <param name="pageSize">cantidad de registros que se contienen en la pagina</param>
+            <param name="orderby">campos sobre los que se ordenara el resultado</param>
+        </member>
+        <member name="T:IdeaCoreModels.FilterQueryString.PaginationFilter">
+            <summary>
+            clase para definir los valores de paginacion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.FilterQueryString.PaginationFilter.PageNumber">
+            <summary>
+            numero de pagina que se quiere consultar
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.FilterQueryString.PaginationFilter.PageSize">
+            <summary>
+            cantidad de registros que se contienen en la pagina
+            </summary>
+        </member>
+        <member name="M:IdeaCoreModels.FilterQueryString.PaginationFilter.#ctor">
+            <summary>
+            inicializa los valores de paginacion
+            PageNumber = 1
+            PageSize = 50
+            </summary>
+        </member>
+        <member name="M:IdeaCoreModels.FilterQueryString.PaginationFilter.#ctor(System.Int32,System.Int32)">
+            <summary>
+            inicializa los valores de paginacion
+            </summary>
+            <param name="pageNumber">numero de pagina que se quiere consultar</param>
+            <param name="pageSize">cantidad de registros que se contienen en la pagina</param>
+        </member>
+        <member name="T:IdeaCoreModels.Response.PagedResponse">
+            <summary>
+            clase que define una respuesta para una lista paginada
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.PagedResponse.PageNumber">
+            <summary>
+            numero de pagina actual
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.PagedResponse.PageSize">
+            <summary>
+            cantidad de registros en una pagina
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.PagedResponse.TotalPages">
+            <summary>
+            total de paginas
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.PagedResponse.TotalRecords">
+            <summary>
+            total de registros en las paginas
+            </summary>
+        </member>
+        <member name="T:IdeaCoreModels.Response.Response`1">
+            <summary>
+            respuesta basica para un solicitud basado en un tipo de modelo
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.Item1">
+            <summary>
+            modelo en el que se basa la respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.TrackerResponse">
+            <summary>
+            tracker de la respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.Status">
+            <summary>
+            status de las respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.Succeeded">
+            <summary>
+            estado de exito de la solicitud
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.Message">
+            <summary>
+            mensaje de la respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.Response`1.Errors">
+            <summary>
+            listado de errores
+            </summary>
+        </member>
+        <member name="M:IdeaCoreModels.Response.Response`1.#ctor(`0,IdeaCoreInterfaces.Aplication.Services.Common.Response.ITrackerResponse)">
+            <summary>
+            inicializa una respuesta con un modelo
+            </summary>
+            <param name="o">modelo de la respuesta</param>
+            <param name="t">tracker de la respuesta</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.Response`1.#ctor(IdeaCoreInterfaces.Aplication.Services.Common.Response.ITrackerResponse)">
+            <summary>
+            inicializa una respuesta con un modelo que inicializa como nuevo
+            </summary>
+            <param name="t">tracker de la respuesta</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.Response`1.#ctor(System.Int16,System.String,System.String[],System.Boolean)">
+            <summary>
+            inicializa una respuesta de error
+            </summary>
+            <param name="code">codigo de error</param>
+            <param name="error">titulo del error</param>
+            <param name="errors">listado de errores sucedidos</param>
+            <param name="succeded">estado de exito de la solicitud</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.Response`1.#ctor(`0)">
+            <summary>
+            inicializa una respuesta con un tracker por default codigo 200 y mensaje OK
+            </summary>
+            <param name="o">modelo de la respuesta</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.Response`1.#ctor">
+            <summary>
+            inicializa una respuesta con valores default nuevos
+            </summary>
+        </member>
+        <member name="T:IdeaCoreModels.Response.TrackerResponse">
+            <summary>
+            tracker para una respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.TrackerResponse.Status">
+            <summary>
+            estatus de la respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.TrackerResponse.Succeeded">
+            <summary>
+            estado de exito de la solicitud
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.TrackerResponse.Message">
+            <summary>
+            mensaje de estado de la respuesta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreModels.Response.TrackerResponse.Errors">
+            <summary>
+            listado de errores sucedidos en la solicitud
+            </summary>
+        </member>
+        <member name="M:IdeaCoreModels.Response.TrackerResponse.#ctor(System.Int16,System.String)">
+            <summary>
+            inicializa un nuevo tracker
+            </summary>
+            <param name="status">estatus de la respuesta</param>
+            <param name="message">mensaje de estado de la respuesta</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.TrackerResponse.#ctor(System.Int16,System.String,System.String[],System.Boolean)">
+            <summary>
+            inicializa un nuevo tracker
+            </summary>
+            <param name="status">status de la respuesta</param>
+            <param name="message">mensaje de estado de la respuesta</param>
+            <param name="errors">lista de errores sucedidos</param>
+            <param name="succeded">estado de exito de la solicitud</param>
+        </member>
+        <member name="M:IdeaCoreModels.Response.TrackerResponse.#ctor">
+            <summary>
+            inicializa un nuevo tracker con estatus 1
+            mensaje OK
+            exito de la solicitud true
+            errors null
+            </summary>
+        </member>
+    </members>
+</doc>

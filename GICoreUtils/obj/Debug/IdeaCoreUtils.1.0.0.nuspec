@@ -21,5 +21,6 @@
   </metadata>
   <files>
     <file src="D:\Personales2023\BackendIdea\GICoreUtils\bin\Debug\net7.0\IdeaCoreUtils.dll" target="lib\net7.0\IdeaCoreUtils.dll" />
+    <file src="D:\Personales2023\BackendIdea\GICoreUtils\bin\Debug\net7.0\IdeaCoreUtils.xml" target="lib\net7.0\IdeaCoreUtils.xml" />
   </files>
 </package>

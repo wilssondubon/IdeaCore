@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using IdeaCoreModels.FilterQueryString;
 using IdeaCoreModels.Response;
-using IdeaCoreUtils.Hateoas;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -13,7 +12,8 @@ using IdeaCoreInterfaces.Aplication.Services.Common.Response;
 using IdeaCoreInterfaces.Infraestructure.UnitOfWork;
 using IdeaCoreInterfaces.Infraestructure.Repository;
 using IdeaCoreInterfaces.Aplication.Models;
-using IdeaCoreInterfaces.Aplication.Models.Hateoas;
+using IdeaCoreHateoas.Contracts;
+using IdeaCoreHateoas;
 
 namespace GICoreServices
 {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IdeaCoreHateoas.Contracts;
 using IdeaCoreInterfaces.Aplication.Models;
-using IdeaCoreInterfaces.Aplication.Models.Hateoas;
 
 namespace IdeaCoreInterfaces.Aplication.Services.Common.Response
 {

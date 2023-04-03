@@ -16,5 +16,6 @@
   </metadata>
   <files>
     <file src="D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.dll" target="lib\net7.0\IdeaCoreModels.dll" />
+    <file src="D:\Personales2023\BackendIdea\GICoreModels\bin\Debug\net7.0\IdeaCoreModels.xml" target="lib\net7.0\IdeaCoreModels.xml" />
   </files>
 </package>

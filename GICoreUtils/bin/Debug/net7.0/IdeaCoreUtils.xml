@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdeaCoreUtils</name>
+    </assembly>
+    <members>
+        <member name="T:IdeaCoreUtils.Accessor.ObjectAccesor">
+            <summary>
+            clase para ayudar a acceder a las propiedades de una clase por nombre
+            contiene funciones para obtener valores y definir valores dentro de la clase de manera dinamica
+            </summary>
+        </member>
+        <member name="F:IdeaCoreUtils.Accessor.ObjectAccesor.Component">
+            <summary>
+            objeto al que se accedera
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.ObjectAccesor.#ctor(System.Object)">
+            <summary>
+            inicializa la clase para acceder a las propiedades de un objeto
+            </summary>
+            <param name="pComponent">objeto al que se accedera</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.ObjectAccesor.Get(System.String)">
+            <summary>
+            obtiene el valor de una propiedad
+            </summary>
+            <param name="PropertyName">nombre de la propiedad</param>
+            <returns>valor de la propiedad</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.ObjectAccesor.Set(System.String,System.Object)">
+            <summary>
+            define un nuevo valor para una propiedad
+            </summary>
+            <param name="PropertyName">nombre de la propiedad</param>
+            <param name="value">nuevo valor a definir</param>
+        </member>
+        <member name="T:IdeaCoreUtils.Accessor.PropertyAccessor">
+            <summary>
+            clase para ayudar a acceder dinamicamente a una propiedad de un objeto
+            </summary>
+        </member>
+        <member name="F:IdeaCoreUtils.Accessor.PropertyAccessor.setValueHandler">
+            <summary>
+            tipo del delegado para definir nuevo valor a una propiedad
+            </summary>
+        </member>
+        <member name="F:IdeaCoreUtils.Accessor.PropertyAccessor.getValueHandler">
+            <summary>
+            tipo del delegado para obtener el valor de una propiedad
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.PropertyAccessor.#ctor(System.Type,System.String)">
+            <summary>
+            inicializa la clase con el tipo del objeto y el nombre de la propiedad a acceder
+            </summary>
+            <param name="ownerType">tipo del objeto</param>
+            <param name="propertyName">nombre de la propiedad a acceder</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.PropertyAccessor.CreateGetValueHandler(System.Reflection.PropertyInfo)">
+            <summary>
+            crea un delegado para obtener el valor de la propiedad
+            </summary>
+            <param name="propertyInfo">informacion reflectiva de la propiedad</param>
+            <returns>delegado</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.PropertyAccessor.GetValue(System.Object)">
+            <summary>
+            obtiene el valor de la propiedad
+            </summary>
+            <param name="component">objeto de donde se tomara la propiedad</param>
+            <returns>el valor de la propiedad</returns>
+            <exception cref="T:System.InvalidOperationException">devuelve error si no hay un delegado para obtener el valor de la propiedad  o no esta inicializado</exception>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.PropertyAccessor.CreateSetValueHandler(System.Reflection.PropertyInfo)">
+            <summary>
+            crea un delegado para definir el valor de la propiedad
+            </summary>
+            <param name="propertyInfo">informacion reflectiva de la propiedad</param>
+            <returns>delegado</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Accessor.PropertyAccessor.SetValue(System.Object,System.Object)">
+            <summary>
+            define el valor de la propiedad
+            </summary>
+            <param name="component">objeto de donde se tomara la propiedad</param>
+            <param name="value">nueva valor para la propiedad</param>
+            <exception cref="T:System.InvalidOperationException">devuelve error si no hay un delegado para definir el valor de la propiedad o no esta inicializado</exception>
+        </member>
+        <member name="T:IdeaCoreUtils.Accessor.PropertyAccessor.SetValueHandler">
+            <summary>
+            delegado para definir el valor de la propiedad
+            </summary>
+            <param name="component">objeto de donde se tomara la propiedad</param>
+            <param name="value">nuevo valor para la propiedad</param>
+        </member>
+        <member name="T:IdeaCoreUtils.Accessor.PropertyAccessor.GetValueHandler">
+            <summary>
+            delegado para obtener el valor de la propiedad
+            </summary>
+            <param name="component">objeto de donde se tomara la propiedad</param>
+            <returns>el valor de la propiedad</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.API.Controller`1">
+            <summary>
+            controlador basico con funciones generales
+            </summary>
+            <typeparam name="Model"></typeparam>
+        </member>
+        <member name="F:IdeaCoreUtils.API.Controller`1._logger">
+            <summary>
+            servicio para escribir logs
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.API.Controller`1.#ctor(Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            inicializa el controlador
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:IdeaCoreUtils.API.Controller`1.ipAddress">
+            <summary>
+            obtiene la ip del cliente que consume el api
+            </summary>
+            <returns>Ip del cliente</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.Controller`1.InternalServerError(System.Exception)">
+            <summary>
+            retorna un mensaje de error 500 basado en una excepcion
+            </summary>
+            <param name="ex">excepcion</param>
+            <returns>error 500</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.Controller`1.GetByIdActionName">
+            <summary>
+            funcion para devolver el nombre de la accion del controlador que funciona como una forma de obtener un unico elemento por su llave principal
+            </summary>
+            <returns>nombre la accion</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.API.CUDController`2">
+            <summary>
+            controlador basico con funciones de Create, Update y Delete
+            </summary>
+            <typeparam name="Model">tipo del modelo en el que se basara el controlador</typeparam>
+        </member>
+        <member name="F:IdeaCoreUtils.API.CUDController`2._service">
+            <summary>
+            servicio generico de tipo CUD
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.#ctor(Microsoft.Extensions.Logging.ILogger,IdeaCoreInterfaces.Aplication.Services.Common.ICUDService{`0,`1})">
+            <summary>
+            inicializa el controlador
+            </summary>
+            <param name="logger">servicio para escribir logs</param>
+            <param name="service">servicio generico de tipo CRUD</param>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.SaveNew(`0)">
+            <summary>
+            funcion que ejecuta una insercion
+            </summary>
+            <param name="data">modelo para guardar</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.SaveNew(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            funcion que ejecuta una insercion basada en un diccionario de nombre de propiedad y valor de la propiedad
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.Update(`0)">
+            <summary>
+            funcion que ejecuta una actualizacion
+            </summary>
+            <param name="data">modelo para actualizar</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.Update(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            funcion que ejecuta una actualizacion basada en un diccionario de nombre de propiedad y valor de la propiedad
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.RemoveEntity(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.RemoveEntity(System.Object[])">
+            <summary>
+            funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.API.CUDController`2.GetByIdActionName">
+            <summary>
+            funcion para devolver el nombre de la accion del controlador que funciona como una forma de obtener un unico elemento por su llave principal
+            </summary>
+            <returns>nombre la accion</returns>
+            <exception cref="T:System.NotImplementedException">no Implementada</exception>
+        </member>
+        <member name="T:IdeaCoreUtils.API.RController`2">
+            <summary>
+            Controlador con funciones comunes de un Read
+            </summary>
+            <typeparam name="Model">tipo del modelo en el que se basara el controlador</typeparam>
+        </member>
+        <member name="F:IdeaCoreUtils.API.RController`2._service">
+            <summary>
+            servicio generico de tipo Read
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.API.RController`2.#ctor(Microsoft.Extensions.Logging.ILogger,IdeaCoreInterfaces.Aplication.Services.Common.IRService{`0,`1})">
+            <summary>
+            inicializa el controlador
+            </summary>
+            <param name="logger">servicio para escribir logs</param>
+            <param name="service">servicio generico de tipo Read</param>
+        </member>
+        <member name="M:IdeaCoreUtils.API.RController`2.GetByIdActionName">
+            <summary>
+            funcion para devolver el nombre de la accion del controlador que funciona como una forma de obtener un unico elemento por su llave principal
+            </summary>
+            <returns>nombre la accion</returns>
+            <exception cref="T:System.NotImplementedException">no Implementada</exception>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.AddDateTimeAtInsert">
+            <summary>
+            atributo para controlar si un campo de un modelo requerira definirse con valor de fecha actual a la hora de una operacion de insercion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.AddDateTimeAtInsert.AddDateTime">
+            <summary>
+            define si se colocara la fecha
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.AddDateTimeAtInsert.DateTimeName">
+            <summary>
+            define el nombre del campo
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.AddDateTimeAtInsert.#ctor(System.String)">
+            <summary>
+            inicializa el atributo con valor verdadero para AddDateTime
+            </summary>
+            <param name="pDateTimeName">nombre del campo</param>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.LastOnInsert">
+            <summary>
+            atributo que define si el valor de una propiedad de un modelo debe definirse con el valor maximo + Skip a la hora de una operacion de insercion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.LastOnInsert.IsLast">
+            <summary>
+            define si debera calcularse el valor maximo
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.LastOnInsert.Skip">
+            <summary>
+            define la cantidad mas alla del maximo que se le asignara a la propiedad
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsert.#ctor(System.Boolean)">
+            <summary>
+            inicializa el atributo con un valor de Skip 1
+            </summary>
+            <param name="pIsLast"></param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsert.#ctor(System.Boolean,System.Int64)">
+            <summary>
+            inicializa el atributo
+            </summary>
+            <param name="pIsLast"></param>
+            <param name="pSkip"></param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsert.#ctor(System.Int64)">
+            <summary>
+            inicializa el atributo con un valor de Skip definido
+            </summary>
+            <param name="pSkip">valor de skip</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsert.#ctor">
+            <summary>
+            inicializa el atributo con valor de skip 1
+            </summary>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.LastOnInsertComposed">
+            <summary>
+            atributo que define si el valor de una propiedad de un modelo debe definirse con el valor maximo + Skip tomando alguna otra propiedad
+            marcada con el atributo UseToCalculateMax a la hora de una operacion de insercion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.LastOnInsertComposed.IsLast">
+            <summary>
+            define si debera calcularse el valor maximo
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.LastOnInsertComposed.Skip">
+            <summary>
+            define la cantidad mas alla del maximo que se le asignara a la propiedad
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsertComposed.#ctor(System.Boolean)">
+            <summary>
+            inicializa el atributo con un valor de Skip 1
+            </summary>
+            <param name="pIsLast"></param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsertComposed.#ctor(System.Boolean,System.Int64)">
+            <summary>
+            inicializa el atributo
+            </summary>
+            <param name="pIsLast"></param>
+            <param name="pSkip"></param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsertComposed.#ctor(System.Int64)">
+            <summary>
+            inicializa el atributo con un valor de Skip definido
+            </summary>
+            <param name="pSkip">valor de skip</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.LastOnInsertComposed.#ctor">
+            <summary>
+            inicializa el atributo con valor de skip 1
+            </summary>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.MergeOnUpdate">
+            <summary>
+            atributo que define si una propiedad debe obtener un nuevo valor a la hora de una operacion de update
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.MergeOnUpdate.Merge">
+            <summary>
+            define si la propiedad debe obtener un nuevo valor
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.MergeOnUpdate.#ctor(System.Boolean)">
+            <summary>
+            inicializa el atributo
+            </summary>
+            <param name="pMerge">si es o no una propiedad actualizable</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.MergeOnUpdate.#ctor">
+            <summary>
+            inicializa el atributo con la propiedad actualizable por default
+            </summary>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.NoNavigationsOnCreateUpdate">
+            <summary>
+            atributo que indica si un modelo debe descartar sus propiedades de navegacion ante una operacion de insercion o modificacion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.NoNavigationsOnCreateUpdate.NoNavigations">
+            <summary>
+            si la propiedad debe descartar sus propiedades de navegacion
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.NoNavigationsOnCreateUpdate.#ctor(System.Boolean)">
+            <summary>
+            inicializa el atributo
+            </summary>
+            <param name="pNoNavigations">si descarta sus propiedades de navegacion</param>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.NoNavigationsOnCreateUpdate.#ctor">
+            <summary>
+            inicializa el atributo con valor verdadero para descartar las propiedades de navegacion
+            </summary>
+        </member>
+        <member name="T:IdeaCoreUtils.Attributes.UseToCalculateMax">
+            <summary>
+            atributo que define si una propiedad debe ser tomada en cuenta a la hora de calcular un maximo para otra propiedad 
+            en una operacion de insercion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.UseToCalculateMax.UseToCalculate">
+            <summary>
+            si debe ser tomada en cuenta
+            </summary>
+        </member>
+        <member name="P:IdeaCoreUtils.Attributes.UseToCalculateMax.MaxProperty">
+            <summary>
+            nombre de la propiedad a tomar en cuenta
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Attributes.UseToCalculateMax.#ctor(System.String)">
+            <summary>
+            inicializa el atributo
+            </summary>
+            <param name="pMaxProperty">nombre de la propiedad a tomar en cuenta</param>
+        </member>
+        <member name="T:IdeaCoreUtils.Extensions.FilterExtensions">
+            <summary>
+            extensiones para obtener diferentes valores referentes a una consulta
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.GetNavigationProperties``1(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            obtiene las propiedades de navegacion de un tipo de entidad
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="dbContext">extiende el dbcontext</param>
+            <returns>devuelve las propiedades de navegacion desde la metadata de entity framework</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.GetPrimaryKeyProperties``1(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            obtiene las propiedades que conforman una llave primaria de un tipo de entidad
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="dbContext">extiende el dbcontext</param>
+            <returns>devuelve las propiedades que conforman una llave primaria desde la metadata de entity framework</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.FilterByObjectWithPrimaryKeyPredicate``1(Microsoft.EntityFrameworkCore.DbContext,System.Object)">
+            <summary>
+            crea un predicado lambda que incluye todas las propiedades que conforman un primary key
+            </summary>
+            <typeparam name="T">Tipo de la entidad</typeparam>
+            <param name="dbContext">extiende un dbcontext</param>
+            <param name="o">objeto del tipo de la entidad</param>
+            <returns>predicado lambda</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.FilterByKeyValueCollectionPredicate``1(Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            crea un predicado lambda que incluye todas las propiedades que contenga el diccionario dentro sus Keys
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="dbContext">extiende el dbcontext</param>
+            <param name="filter">diccionario de tipo nombre de la propiedad y valor de la propiedad</param>
+            <returns>predicado lambda</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.FilterByPrimaryKeyPredicate``1(Microsoft.EntityFrameworkCore.DbContext,System.Object[])">
+            <summary>
+            crea un predicado lambda que incluye todas las propiedades que contenga los valores de tipo id
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="dbContext">extiende el dbcontext</param>
+            <param name="id">valores de tipo id {primary key}</param>
+            <returns>predicado lambda</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.GetPrimaryKeyExpression``1(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            crea un predicado lambda que incluye todas las propiedades que contenga los valores de tipo id
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="context">extiende el dbcontext</param>
+            <returns>predicado lambda</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.FilterExtensions.FilterByPrimaryKey``1(Microsoft.EntityFrameworkCore.DbSet{``0},Microsoft.EntityFrameworkCore.DbContext,System.Object[])">
+            <summary>
+            filtra un objeto por sus propiedades de tipo id {llave principal}
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad</typeparam>
+            <param name="dbSet">extiende el dbset</param>
+            <param name="context">el dbcontext en el que se asigna el dbset</param>
+            <param name="id">propiedades de tipo id</param>
+            <returns>coleccion de consulta de la entidad</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.Extensions.IQueryableExtensions">
+            <summary>
+            extensiones para IQueryable
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IQueryableExtensions.FilterByPrimaryKey``1(System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.DbContext,System.Object[])">
+            <summary>
+            filtra por primary key
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad</typeparam>
+            <param name="queryable">extiende IQueryable</param>
+            <param name="context">dbcontext donde se trabajara</param>
+            <param name="id">propiedades de primary key</param>
+            <returns>coleccion de consulta</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IQueryableExtensions.FilterByObjectWithPrimaryKey``1(System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.DbContext,System.Object)">
+            <summary>
+            filtra un objeto por su llave primaria teniendo el objeto completo
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad</typeparam>
+            <param name="queryable">extiende IQueryable</param>
+            <param name="context">dbcontext donde se trabajara</param>
+            <param name="o">objeto completo</param>
+            <returns>coleccion de consulta</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IQueryableExtensions.FilterByKeyValueCollection``1(System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.DbContext,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            filtra un objeto basado en los valores de un diccionario de tipo nombre de la propiedad y valor de la propiedad
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="queryable">extiende IQueryable</param>
+            <param name="context">dbcontext donde se trabajara</param>
+            <param name="filter">diccionario de tipo nombre de la propiedad y valor de la propiedad</param>
+            <returns>coleccion de consulta</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IQueryableExtensions.IncludeNavigations``1(System.Linq.IQueryable{``0},System.Func{System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{``0,System.Object}}[])">
+            <summary>
+            agrega las propiedades de navegacion a una consulta
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad</typeparam>
+            <param name="source">extiende IQueryable</param>
+            <param name="include">funciones de tipo include</param>
+            <returns>coleccion de consulta</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IQueryableExtensions.ApplySort``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            Ejecuta un query sobre una instruccion linq basado en un string para ordenar el resultado
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad</typeparam>
+            <param name="source">extiende IQueryable</param>
+            <param name="orderByQueryString">string con las propiedades para ordenar el queryable</param>
+            <returns>coleccion de consultas</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.Extensions.IUnitOfWorkExtensions">
+            <summary>
+            extensiones para la unidad de trabajo
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.IUnitOfWorkExtensions.Repositories``1(IdeaCoreInterfaces.Infraestructure.UnitOfWork.IUnitOfWork)">
+            <summary>
+            agrega un repositorio generico basado en el tipo de la entidad
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="unitOfWork">unidad de trabajo donde se agregara</param>
+            <returns>el repositorio agregado</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.Extensions.PaginationExtensions">
+            <summary>
+            extensiones para filtros de paginacion
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Extensions.PaginationExtensions.GetPaginatedList``1(IdeaCoreInterfaces.Aplication.Models.IPaginationFilter,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            obtiene una lista paginada
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="paginationFilter">extiende IPaginationFilter</param>
+            <param name="queryable">lista sin paginar</param>
+            <returns>Lista Paginada</returns>
+        </member>
+        <member name="T:IdeaCoreUtils.Utils.ExpressionConverter`2">
+            <summary>
+            ExpressionVisitor para lambdas, convierte entre predicados de una clase a predicado de otra clase
+            </summary>
+            <typeparam name="TInput"></typeparam>
+            <typeparam name="TOutput"></typeparam>
+        </member>
+        <member name="F:IdeaCoreUtils.Utils.ExpressionConverter`2.replaceParam">
+            <summary>
+            parametro a reemplazar
+            </summary>
+        </member>
+        <member name="M:IdeaCoreUtils.Utils.ExpressionConverter`2.Convert(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            convierte un predicado
+            </summary>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Utils.ExpressionConverter`2.VisitLambda``1(System.Linq.Expressions.Expression{``0})">
+            <summary>
+            modifica una expresion basada en un tipo
+            </summary>
+            <typeparam name="T">clase del objeto</typeparam>
+            <param name="node">la expresion a convertir</param>
+            <returns>la expresion modificada</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Utils.ExpressionConverter`2.VisitParameter(System.Linq.Expressions.ParameterExpression)">
+            <summary>
+            convierte una expresion
+            </summary>
+            <param name="node">la expresion a convertir</param>
+            <returns>la expresion modificada</returns>
+        </member>
+        <member name="M:IdeaCoreUtils.Utils.ExpressionConverter`2.VisitMember(System.Linq.Expressions.MemberExpression)">
+            <summary>
+            convierte una expresion de tipo member
+            </summary>
+            <param name="node">a expresion a convertir</param>
+            <returns>la expresion modificada</returns>
+            <exception cref="T:System.InvalidOperationException">devuelve error si el miembro no existe</exception>
+        </member>
+        <member name="T:GICoreUtils.API.CRUDController`2">
+            <summary>
+            Controlador con funciones comunes de un Crud
+            </summary>
+            <typeparam name="Model">tipo del modelo en el que se basa el controlador</typeparam>
+        </member>
+        <member name="F:GICoreUtils.API.CRUDController`2.cudController">
+            <summary>
+            controlador con funciones que sirven para hacer Create, Update, Delete
+            </summary>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._SaveNew(`0)">
+            <summary>
+            funcion que ejecuta una insercion
+            </summary>
+            <param name="data">modelo para insertar</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._SaveNew(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            funcion que ejecuta una insercion basada en un diccionario de nombre de propiedad y valor de la propiedad
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._Update(`0)">
+            <summary>
+            funcion que ejecuta una actualizacion
+            </summary>
+            <param name="data">modelo para actualizar</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._Update(System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            funcion que ejecuta una actualizacion basada en un diccionario de nombre de propiedad y valor de la propiedad
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._RemoveEntity(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
+            </summary>
+            <param name="data">diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2._RemoveEntity(System.Object[])">
+            <summary>
+            funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
+            </summary>
+            <param name="data">array de valores que conforman por lo menos una llave principal</param>
+            <returns>resultado de una accion</returns>
+        </member>
+        <member name="F:GICoreUtils.API.CRUDController`2.rController">
+            <summary>
+            controlador con funciones que sirven para hacer Read
+            </summary>
+        </member>
+        <member name="F:GICoreUtils.API.CRUDController`2._service">
+            <summary>
+            servicio con operaciones de tipo crud que se utilizara en el controlador 
+            </summary>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2.#ctor(Microsoft.Extensions.Logging.ILogger,IdeaCoreInterfaces.Aplication.Services.Common.ICRUDService{`0,`1})">
+            <summary>
+            inicializa un controller con funciones comunes de un crud con llamadas a un servicio de tipo CRUD
+            </summary>
+            <param name="logger">logger para escribir logs</param>
+            <param name="service">servicio que se utilizara en el controlador</param>
+        </member>
+        <member name="M:GICoreUtils.API.CRUDController`2.GetByIdActionName">
+            <summary>
+            funcion para devolver el nombre de la accion del controlador que funciona como una forma de obtener un unico elemento por su llave principal
+            </summary>
+            <returns>nombre la accion</returns>
+            <exception cref="T:System.NotImplementedException">no Implementada</exception>
+        </member>
+    </members>
+</doc>

@@ -15,3 +15,6 @@ D:\Personales2023\BackendIdea\GICoreUtils\obj\Debug\net7.0\IdeaCoreUtils.dll
 D:\Personales2023\BackendIdea\GICoreUtils\obj\Debug\net7.0\refint\IdeaCoreUtils.dll
 D:\Personales2023\BackendIdea\GICoreUtils\obj\Debug\net7.0\IdeaCoreUtils.pdb
 D:\Personales2023\BackendIdea\GICoreUtils\obj\Debug\net7.0\ref\IdeaCoreUtils.dll
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Debug\net7.0\IdeaCoreUtils.xml
+D:\Personales2023\BackendIdea\GICoreUtils\bin\Debug\net7.0\IdeaCoreModels.xml
+D:\Personales2023\BackendIdea\GICoreUtils\obj\Debug\net7.0\IdeaCoreUtils.xml

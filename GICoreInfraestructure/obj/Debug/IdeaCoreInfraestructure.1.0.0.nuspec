@@ -18,5 +18,6 @@
   </metadata>
   <files>
     <file src="D:\Personales2023\BackendIdea\GICoreInfraestructure\bin\Debug\net7.0\IdeaCoreInfraestructure.dll" target="lib\net7.0\IdeaCoreInfraestructure.dll" />
+    <file src="D:\Personales2023\BackendIdea\GICoreInfraestructure\bin\Debug\net7.0\IdeaCoreInfraestructure.xml" target="lib\net7.0\IdeaCoreInfraestructure.xml" />
   </files>
 </package>

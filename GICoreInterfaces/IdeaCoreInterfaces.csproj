@@ -16,4 +16,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IdeaCoreHateoas\IdeaCoreHateoas.csproj" />
+  </ItemGroup>
+
 </Project>

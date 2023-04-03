@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdeaCoreInfraestructure</name>
+    </assembly>
+    <members>
+        <member name="T:IdeaCoreInfraestructure.Repository.DynamicRepositoryCollection">
+            <summary>
+            clase para una clase que contiene un diccionario de repositorios
+            </summary>
+        </member>
+        <member name="P:IdeaCoreInfraestructure.Repository.DynamicRepositoryCollection.repositories">
+            <summary>
+            diccionario de repositorios
+            </summary>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.DynamicRepositoryCollection.Add(System.String,System.Object)">
+            <summary>
+            funcion para agregar un nuevo elemento al diccionario de repositorios
+            </summary>
+            <param name="Key">el nombre del tipo de la entidad en la que se basa el repositorio</param>
+            <param name="value">la instancia del repositorio</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.DynamicRepositoryCollection.#ctor">
+            <summary>
+            inicializa la coleccion dinamica de repositorios con un nuevo diccionario
+            </summary>
+        </member>
+        <member name="T:IdeaCoreInfraestructure.Repository.GenericRepository`1">
+            <summary>
+            clase para un repositorio generico
+            </summary>
+            <typeparam name="TEntity">Entidad a la que consultara el repositorio</typeparam>
+        </member>
+        <member name="F:IdeaCoreInfraestructure.Repository.GenericRepository`1._includesPaths">
+            <summary>
+            Array de funciones Include
+            </summary>
+        </member>
+        <member name="F:IdeaCoreInfraestructure.Repository.GenericRepository`1.context">
+            <summary>
+            dbcontext a utilizar
+            </summary>
+        </member>
+        <member name="F:IdeaCoreInfraestructure.Repository.GenericRepository`1.dbSet">
+            <summary>
+            dbset de la entidad
+            </summary>
+        </member>
+        <member name="P:IdeaCoreInfraestructure.Repository.GenericRepository`1.DbSet">
+            <summary>
+            dbset de la entidad
+            </summary>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            inicializa un nuevo repositorio generico
+            </summary>
+            <param name="ctx">dbcontext</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext,System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}}[])">
+            <summary>
+            inicializa un nuevo repositorio generico
+            </summary>
+            <param name="ctx">dbcontext</param>
+            <param name="includesPaths">Array de funciones Include</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.setNavigationsProperties(System.Func{System.Linq.IQueryable{`0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{`0,System.Object}}[])">
+            <summary>
+            estas propiedades de navegaciones se incluiran en cada entidad retraida por el repositorio
+            repositorio.setNavigationsProperties(t=>t.include(e=>e.navigationProperty));
+            </summary>
+            <param name="includesPaths">Array de funciones Include</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetNavigationProperties">
+            <summary>
+            obtiene una coleccion de las propiedades de navegacion de la entidad
+            </summary>
+            <returns>coleccion de propiedades de navegacion de la entidad</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetPrimaryKeyProperties">
+            <summary>
+            obtiene una coleccion de las propiedades que forman la llave primaria de la entidad
+            </summary>
+            <returns>coleccion de propiedades que forman la llave primaria de la entidad</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Query(System.String,Microsoft.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Obtiene una coleccion de entidades mediante un procedimiento almacenado por medio de FromSqlRaw
+            </summary>
+            <param name="spName">nombre del procedimiento almacenado</param>
+            <param name="parameters">coleccion de parametros para pasar al procedimiento almacenado</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Exec(System.String,Microsoft.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Obtiene una coleccion de entidades mediante un procedimiento almacenado por medio de FromSqlInterpolated
+            </summary>
+            <param name="spName">nombre del procedimiento almacenado</param>
+            <param name="parameters">coleccion de parametros para pasar al procedimiento almacenado</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Insert(`0)">
+            <summary>
+            Ejecuta una insercion
+            </summary>
+            <param name="entity">la entidad que se guardara</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Update(`0)">
+            <summary>
+            Ejecuta una actualizacion a un registro 
+            </summary>
+            <param name="entityToUpdate">la entidad que se modificara</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Delete(`0)">
+            <summary>
+            Ejecuta una eliminacion
+            </summary>
+            <param name="entityToDelete">la entidad que se eliminara</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Delete(System.Object)">
+            <summary>
+            Ejecuta una eliminacion
+            </summary>
+            <param name="id">es una representacion del campo que sirve como primary key de la entidad</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Delete(System.Object[])">
+            <summary>
+            Ejecuta una eliminacion
+            </summary>
+            <param name="keyvalues">representa un array de todos los campos que componen el primary key</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.FindByID(System.Object[])">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key
+            </summary>
+            <param name="keyvalues">representa un array de todos los campos que componen el primary key</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Object)">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key que se extrae del objeto pasado por parametros
+            </summary>
+            <param name="o">Objeto que contiene al menos las propiedades para formar el Primary Key de la entidad</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un predicado lambda
+            </summary>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un predicado lambda
+            </summary>
+            <param name="filter">expresion de predicado lambda</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un predicado lambda
+            </summary>
+            <param name="filter">expresion de predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderan el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un predicado lambda
+            </summary>
+            <param name="filter">expresion de predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderan el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un diccionario que se convierte en un predicado lambda
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.String)">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un diccionario que se convierte en un predicado lambda
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un diccionario que se convierte en un predicado lambda
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Collections.Generic.IDictionary{System.String,System.String},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un diccionario que se convierte en un predicado lambda
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetFirst(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Obtiene el primer elemento de una coleccion de entidades basado en un diccionario que se convierte en un predicado lambda
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetByID(System.Object)">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key {id}
+            </summary>
+            <param name="id">es una representacion del campo que sirve como primary key de la entidad</param>
+            <returns>devuelve una entidad</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetByIDAsync(System.Object)">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key {id}
+            </summary>
+            <param name="id">es una representacion del campo que sirve como primary key de la entidad</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetByID(System.Object[])">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key
+            </summary>
+            <param name="keyvalues">representa un array de todos los campos que componen el primary key</param>
+            <returns>devuelve una entidad</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.GetByIDAsync(System.Object[])">
+            <summary>
+            Devuelve un elemento Entidad basado en el Primary Key
+            </summary>
+            <param name="keyvalues">representa un array de todos los campos que componen el primary key</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una entidad.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>lista paginada</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.String)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.String,IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.String,IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String},IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}})">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String},System.String)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Get(System.Collections.Generic.IDictionary{System.String,System.String},System.String,IdeaCoreInterfaces.Aplication.Models.IPaginationFilter)">
+            <summary>
+            Obtiene una coleccion de entidades
+            </summary>
+            <param name="filter">diccionario con valores de nombre de propiedad y valor a filtrar que se convertira en un predicado lambda</param>
+            <param name="orderBy">parametro opcional para orderar el query principal antes de obtener el primero de la lista</param>
+            <param name="paginationFilter">filtro de paginacion</param>
+            <returns>Una tarea que representa una operacion asincrona. La tarea contiene una coleccion de entidades.</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.Repository.GenericRepository`1.Max``1(System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Devuelve un valor maximo de alguna de las propiedades de una entidad contenida en una coleccion
+            </summary>
+            <typeparam name="T">el tipo de dato que se busca retornar</typeparam>
+            <param name="maxexpression">expresion para indicar la propiedad de la que se busca el maximo</param>
+            <param name="predicate">expresion de predicado lambda para filtrar la coleccion de Entidades</param>
+            <returns>devuelve una valor maximo</returns>
+        </member>
+        <member name="T:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork">
+            <summary>
+            clase para la creacion de una unidad de trabajo para la infraestructura de la aplicacion
+            </summary>
+        </member>
+        <member name="F:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.disposed">
+            <summary>
+            bandera de destruccion
+            </summary>
+        </member>
+        <member name="P:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.dbcontext">
+            <summary>
+            dbcontext
+            </summary>
+        </member>
+        <member name="P:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Repositories">
+            <summary>
+            coleccion de repositorios
+            </summary>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.NewRepository``1(System.Func{System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{``0,System.Object}}[])">
+            <summary>
+            funcion para agregar un repositorio generico basado en un tipo de entidad
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <returns>devuelve un repositorio generico</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.AddRepository``1(System.Func{System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{``0,System.Object}}[])">
+            <summary>
+            funcion para agregar un repositorio generico basado en un tipo de entidad
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.AddRepository``1(IdeaCoreInterfaces.Infraestructure.Repository.IDynamicRepositoryCollection,System.Func{System.Linq.IQueryable{``0},Microsoft.EntityFrameworkCore.Query.IIncludableQueryable{``0,System.Object}}[])">
+            <summary>
+            funcion para agregar un repositorio generico basado en un tipo de entidad a una lista dinamica de repositorios
+            </summary>
+            <typeparam name="T">tipo de la entidad</typeparam>
+            <param name="dynamicRepository">lista de dinamica de repositorios</param>
+            <returns>devuelve un repositorio generico</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            inicializar la unidad de trabajo
+            </summary>
+            <param name="db">dbcontext</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Save">
+            <summary>
+            funcion que ejecuta una instruccion de guardado hacia el dbcontext
+            </summary>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.SaveChangesAsync">
+            <summary>
+            funcion que ejecuta una instruccion de guardado hacia el dbcontext de forma asincrona
+            </summary>
+            <returns>una tarea que representa una llamada asincrona que contiene el estatus del guardado</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Dispose(System.Boolean)">
+            <summary>
+            para destruir la unidad de trabajo cuando la solicitud haya finalizado
+            </summary>
+            <param name="disposing">destruir?</param>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Dispose">
+            <summary>
+            para destruir la unidad de trabajo cuando la solicitud haya finalizado
+            </summary>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Query``1(System.String,Microsoft.Data.SqlClient.SqlParameter[],System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.String)">
+            <summary>
+            funcion para ejecutar una solicitud a un procedimiento almacenado que no devuelva cualquier tipo de entidad, usa FromSqlRaw
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad a ser devueta </typeparam>
+            <param name="spName">nombre del procedimiento almacenado</param>
+            <param name="parameters">parametros para el procedimiento almacenado</param>
+            <param name="filter">filtro para los datos devueltos</param>
+            <param name="orderBy">orden para los datos devueltos</param>
+            <param name="includeProperties">listado de propiedades de navegacion a ser incluidas en la respuesta</param>
+            <returns>listado de consulta con la respuesta del procedimiento almacenado</returns>
+        </member>
+        <member name="M:IdeaCoreInfraestructure.UnitOfWork.UnitOfWork.Exec``1(System.String,Microsoft.Data.SqlClient.SqlParameter[],System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.String)">
+            <summary>
+            funcion para ejecutar una solicitud a un procedimiento almacenado que no devuelva cualquier tipo de entidad, usa FromSqlInterpolated
+            </summary>
+            <typeparam name="TEntity">tipo de la entidad a ser devueta </typeparam>
+            <param name="spName">nombre del procedimiento almacenado</param>
+            <param name="parameters">parametros para el procedimiento almacenado</param>
+            <param name="filter">filtro para los datos devueltos</param>
+            <param name="orderBy">orden para los datos devueltos</param>
+            <param name="includeProperties">listado de propiedades de navegacion a ser incluidas en la respuesta</param>
+            <returns>listado de consulta con la respuesta del procedimiento almacenado</returns>
+        </member>
+    </members>
+</doc>

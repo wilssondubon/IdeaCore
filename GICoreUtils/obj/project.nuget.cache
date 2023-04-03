@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "bqekT95KwI7R2JYHoxNusjHzzoUBUpF5eqkbPcqOSAcmzXDp0DT2X2ladB3xe1wK0JpOU5DQCJpM3g97dirvhw==",
+  "dgSpecHash": "5sKBS2s03+hdk0/5bjajl1SbmJlbw4izABgwLapJrCBsF+w9Y2dC+1hEJQX3l4WlHGWVAjv3cwLMlUCkpp3S4A==",
   "success": true,
   "projectFilePath": "D:\\Personales2023\\BackendIdea\\GICoreUtils\\IdeaCoreUtils.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Analista.Programador\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
@@ -112,7 +113,9 @@
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Analista.Programador\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
+    "C:\\Users\\Analista.Programador\\.nuget\\packages\\ideacoreinterfaces\\1.0.0\\ideacoreinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\Analista.Programador\\.nuget\\packages\\ideacoremodels\\1.0.0\\ideacoremodels.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }
