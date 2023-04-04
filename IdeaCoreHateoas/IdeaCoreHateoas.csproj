@@ -25,4 +25,8 @@
     <ProjectReference Include="..\IdeaCoreModels\IdeaCoreModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\" />
+  </ItemGroup>
+
 </Project>

@@ -2,6 +2,7 @@
 using GICoreServices;
 using IdeaCoreApplication.Contracts;
 using IdeaCoreInterfaces.Application;
+using IdeaCoreInterfaces.Hateoas;
 using IdeaCoreInterfaces.Infraestructure;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
@@ -28,7 +29,7 @@ namespace IdeaCoreApplication
         /// <summary>
         /// servicio que se conecta al httpcontext de la solicitud
         /// </summary>
-        private readonly IUriService _uriService;
+        private readonly IHateoasListWrapperService _hateoasListWrapperService;
         /// <summary>
         /// Coleccion de Servicio Genericos
         /// </summary>
@@ -44,7 +45,7 @@ namespace IdeaCoreApplication
             if (Services is null)
                 Services = new List<IBasicService>();
 
-            var service = new CommonService<TModel, TEntity>(_unitOfWork, _mapper, _uriService);
+            var service = new CommonService<TModel, TEntity>(_unitOfWork, _mapper, _hateoasListWrapperService);
 
             if (!Services.Contains(service))
             {
@@ -65,7 +66,7 @@ namespace IdeaCoreApplication
             if (Services is null)
                 Services = new List<IBasicService>();
 
-            var service = new CommonService<TModel, TEntity>(_unitOfWork, _mapper, _uriService, includeNavigationProperties);
+            var service = new CommonService<TModel, TEntity>(_unitOfWork, _mapper, _hateoasListWrapperService, includeNavigationProperties);
 
             if (!Services.Contains(service))
             {
@@ -80,11 +81,11 @@ namespace IdeaCoreApplication
         /// <param name="unitOfWork">unidad de trabajo</param>
         /// <param name="mapper">automapper</param>
         /// <param name="uriService">servicio que se conecta al httpcontext de la solicitud</param>
-        public AppServices(IUnitOfWork unitOfWork, IMapper mapper, IUriService uriService)
+        public AppServices(IUnitOfWork unitOfWork, IMapper mapper, IHateoasListWrapperService hateoasListWrapperService)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
-            _uriService = uriService;
+            _hateoasListWrapperService = hateoasListWrapperService;
         }
     }
 }

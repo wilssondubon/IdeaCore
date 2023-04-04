@@ -87,7 +87,7 @@ namespace GICoreServices
             if (o == null)
                 return noListNoFoundError();
 
-            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _uriService, totalRecords);
+            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _hateoasListWrapperService, totalRecords);
         }
         // <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelo, la respuesta puede ser un error si la lista de entidades no contiene elementos
@@ -99,7 +99,7 @@ namespace GICoreServices
             if (o == null)
                 return noListNoFoundError();
 
-            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _uriService, o.Count());
+            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _hateoasListWrapperService, o.Count());
         }
         /// <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelo, la respuesta puede ser un error si la lista de entidades no contiene elementos
@@ -111,7 +111,7 @@ namespace GICoreServices
             if (o == null)
                 return noListNoFoundError();
 
-            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _uriService);
+            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _hateoasListWrapperService);
         }
         /// <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelos paginada

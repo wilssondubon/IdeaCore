@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdeaCoreApplication.Models
+namespace IdeaCoreModels
 {
     /// <summary>
     /// clase que define una respuesta para una lista paginada

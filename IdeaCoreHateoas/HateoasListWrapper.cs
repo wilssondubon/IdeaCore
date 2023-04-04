@@ -1,4 +1,4 @@
-﻿using IdeaCoreHateoas.Contracts;
+﻿using IdeaCoreInterfaces.Application.Response;
 using IdeaCoreInterfaces.Hateoas;
 using IdeaCoreModels;
 using Microsoft.AspNetCore.Http;
@@ -13,11 +13,12 @@ using System.Threading.Tasks;
 
 namespace IdeaCoreHateoas
 {
-    public class HateoasListWrapper: IHateoasListWrapper
+    public class HateoasListWrapper<Model>: IHateoasListWrapper<Model> where Model : class
     {
-        public object data { get; }
-        public List<ILink>? links { get; set; }
-        public HateoasListWrapper(object embed) {
+        public IEnumerable<Model>? data { get; set; }
+        public IList<ILink>? links { get; set; }
+        public IPagedResponse? paging { get; set; }
+        public HateoasListWrapper(IEnumerable<Model> embed) {
             data = embed;
         }
     }

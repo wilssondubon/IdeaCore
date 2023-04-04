@@ -37,7 +37,7 @@ namespace GICoreServices
         /// <summary>
         /// servicio que se conecta al httpcontext de la solicitud
         /// </summary>
-        protected readonly IUriService _uriService;
+        protected readonly IHateoasListWrapperService _hateoasListWrapperService;
         /// <summary>
         /// funciones include para incluirse en cada solicitud de elementos al repositorio
         /// </summary>
@@ -56,11 +56,11 @@ namespace GICoreServices
         /// <param name="unitOfWork">unidad de trabajo de la infraestructura de la aplicacion</param>
         /// <param name="mapper">automapper</param>
         /// <param name="uriService">servicio que se conecta al httpcontext de la solicitud</param>
-        public CommonService(IUnitOfWork unitOfWork, IMapper mapper, IUriService uriService, Func<IQueryable<Entity>, IIncludableQueryable<Entity, object>>[]? includeNavigationProperties = null)
+        public CommonService(IUnitOfWork unitOfWork, IMapper mapper, IHateoasListWrapperService hateoasListWrapperService, Func<IQueryable<Entity>, IIncludableQueryable<Entity, object>>[]? includeNavigationProperties = null)
         {
             this._unitOfWork = unitOfWork;
             this._mapper = mapper;
-            this._uriService = uriService;
+            this._hateoasListWrapperService = hateoasListWrapperService;
             this._repositorio = unitOfWork.AddRepository<Entity>(unitOfWork.Repositories, includeNavigationProperties);
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace GICoreServices
             /// <summary>
             /// el modelo en el que se basa la respuesta
             /// </summary>
-            public Model data => this.Item1;
+            //public new Model data { get; set; }
             /// <summary>
             /// crea una nueva respuesta con un tracker
             /// </summary>
@@ -120,11 +120,7 @@ namespace GICoreServices
         {
             private readonly int _totalRecords;
 
-            private readonly IUriService _uriService;
-            /// <summary>
-            /// lista de modelos en lo que se basa la respuesta
-            /// </summary>
-            public IEnumerable<Model> data => this.Item1;
+            private readonly IHateoasListWrapperService _hateoasListWrapperService;
             /// <summary>
             /// opciones de paginado
             /// </summary>
@@ -134,73 +130,6 @@ namespace GICoreServices
             /// </summary>
             public IList<ILink>? links { get; set; }
             /// <summary>
-            /// asigna los valores de paginacion y crea los links correspondientes
-            /// </summary>
-            /// <param name="paginationFilter">opciones de paginacion</param>
-            /// <returns>respuesta paginada</returns>
-            public IServiceResponseList<Model> SetPagination(IPaginationFilter paginationFilter = null)
-            {
-                IServiceResponseList<Model> response = this;
-
-                if (paginationFilter != null && _totalRecords > paginationFilter.PageSize)
-                {
-                    int roundedTotalPages = Convert.ToInt32(Math.Ceiling((double)_totalRecords / paginationFilter.PageSize));
-
-                    response.paging = new PagedResponse
-                    {
-                        PageNumber = paginationFilter.PageNumber,
-                        PageSize = paginationFilter.PageSize,
-                        TotalPages = roundedTotalPages,
-                        TotalRecords = _totalRecords,
-                    };
-
-                    _uriService.httpContext.Response.Headers.Add("X-Paging-PageNo", response.paging.PageNumber.ToString());
-                    _uriService.httpContext.Response.Headers.Add("X-Paging-PageSize", response.paging.PageSize.ToString());
-                    _uriService.httpContext.Response.Headers.Add("X-Paging-PageCount", response.paging.TotalPages.ToString());
-                    _uriService.httpContext.Response.Headers.Add("X-Paging-TotalRecordCount", response.paging.TotalRecords.ToString());
-
-                    if (response.links == null)
-                        response.links = new List<ILink>();
-
-
-                    response.links.Add(
-                        new Link(_uriService.GetPaginationPageUri(new FilterQueryParams(1, response.paging.PageSize)),
-                        "first",
-                        "GET")
-                    );
-
-                    if (response.paging.PageNumber - 1 >= 1 && response.paging.PageNumber <= response.paging.TotalPages)
-                    {
-                        response.links.Add(
-                            new Link(_uriService.GetPaginationPageUri(new FilterQueryParams(response.paging.PageNumber - 1, response.paging.PageSize)),
-                            "prev",
-                            "GET")
-                        );
-                    }
-
-                    if (response.paging.PageNumber >= 1 && response.paging.PageNumber < response.paging.TotalPages)
-                    {
-                        response.links.Add(
-                            new Link(_uriService.GetPaginationPageUri(new FilterQueryParams(response.paging.PageNumber + 1, response.paging.PageSize)),
-                            "next",
-                            "GET")
-                        );
-                    }
-
-                    response.links.Add(
-                        new Link(_uriService.GetPaginationPageUri(new FilterQueryParams(response.paging.TotalPages, response.paging.PageSize)),
-                        "last",
-                        "GET")
-                    );
-                }
-                else
-                {
-                    response.paging = null;
-                }
-
-                return response;
-            }
-            /// <summary>
             /// crea una respueta basada en una lista de entidades que mapearan a una lista de modelos
             /// </summary>
             /// <param name="o">lista de entidades</param>
@@ -208,23 +137,17 @@ namespace GICoreServices
             /// <param name="mapper">mapper que se encargara de transforma de entidades a modelos</param>
             /// <param name="uriService">servicio que accede al httpcontext de la peticion</param>
             /// <param name="totalRecords">total de elementos en la respuesta</param>
-            public ServiceResponseList(IEnumerable<Entity> o, ITrackerResponse t, IMapper mapper, IUriService uriService, int totalRecords)
+            public ServiceResponseList(IEnumerable<Entity> o, ITrackerResponse t, IMapper mapper,  IHateoasListWrapperService hateoasListWrapperService, int totalRecords)
               : base(mapper.Map<IEnumerable<Model>>(o), t)
             {
-                _uriService = uriService;
+                _hateoasListWrapperService = hateoasListWrapperService;
                 _totalRecords = totalRecords;
 
-                if (!uriService.isHateoasRequest())
+                if (!_hateoasListWrapperService.isHateoasRequest())
                     return;
 
-                if (links == null)
-                    links = new List<ILink>();
-
-                links.Add(
-                       new Link(new Uri(_uriService.selfUriWithQuery),
-                       "self",
-                       "GET")
-                   );
+                var hateoasListWrapper = _hateoasListWrapperService.Wrap(data);
+                links = hateoasListWrapper.links;
             }
             /// <summary>
             /// crea una respueta basada en una lista de entidades que mapearan a una lista de modelos
@@ -233,25 +156,19 @@ namespace GICoreServices
             /// <param name="t">tracker de la respuesta</param>
             /// <param name="mapper">mapper que se encargara de transforma de entidades a modelos</param>
             /// <param name="uriService">servicio que accede al httpcontext de la peticion</param>
-            public ServiceResponseList(IPagedReadOnlyList<Entity> o, ITrackerResponse t, IMapper mapper, IUriService uriService)
+            public ServiceResponseList(IPagedReadOnlyList<Entity> o, ITrackerResponse t, IMapper mapper, IHateoasListWrapperService hateoasListWrapperService)
               : base(mapper.Map<IEnumerable<Model>>(o), t)
             {
-                _uriService = uriService;
+                _hateoasListWrapperService = hateoasListWrapperService;
                 _totalRecords = o.TotalRecords;
 
-                if (!uriService.isHateoasRequest())
+                if (!_hateoasListWrapperService.isHateoasRequest())
                     return;
 
-                if (links == null)
-                    links = new List<ILink>();
-
-                links.Add(
-                       new Link(new Uri(_uriService.selfUriWithQuery),
-                       "self",
-                       "GET")
-                   );
-
-                SetPagination(new FilterQueryParams(o.PageNumber, o.PageSize));
+                var hateoasListWrapper = _hateoasListWrapperService.Wrap(data);
+                hateoasListWrapper = _hateoasListWrapperService.AddPagination(hateoasListWrapper, _totalRecords, new FilterQueryParams(o.PageNumber, o.PageSize));
+                links = hateoasListWrapper.links;
+                paging = hateoasListWrapper.paging;
             }
             /// <summary>
             /// respuesta de error
