@@ -3,15 +3,13 @@
 using System;
 using System.Collections.Generic;
 
-namespace IdeaCoreTesting.Entities;
+namespace Entities;
 
-public partial class Electrodomestico
+public partial class Tipo
 {
-    public short Codigo { get; set; }
-
     public short IdTipo { get; set; }
 
     public string Descripcion { get; set; }
 
-    public virtual Tipo IdTipoNavigation { get; set; }
+    public virtual ICollection<Electrodomestico> Electrodomestico { get; } = new List<Electrodomestico>();
 }

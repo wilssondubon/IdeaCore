@@ -27,8 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdeaCoreHateoas\IdeaCoreHateoas.csproj" />
-    <ProjectReference Include="..\IdeaCoreInfraestructure\IdeaCoreInfraestructure.csproj" />
+    <ProjectReference Include="..\..\API\IdeaCoreTestAPI\IdeaCoreTestAPI.csproj" />
+    <ProjectReference Include="..\..\IdeaCoreHateoas\IdeaCoreHateoas.csproj" />
+    <ProjectReference Include="..\..\IdeaCoreInfraestructure\IdeaCoreInfraestructure.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>

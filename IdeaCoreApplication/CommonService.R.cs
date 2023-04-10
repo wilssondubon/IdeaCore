@@ -92,7 +92,7 @@ namespace GICoreServices
         public virtual async Task<IServiceResponseList<Model>> Get(IPaginationFilter paginationFilter)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(paginationFilter)));
         public virtual async Task<IServiceResponseList<Model>> Get(IFilterQueryParams queryParams)
-            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(queryParams.OrderBy, queryParams)));
+            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(queryParams?.OrderBy, queryParams)));
         public virtual async Task<IServiceResponseList<Model>> Get(string orderBy)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(orderBy)));
         public virtual async Task<IServiceResponseList<Model>> Get(string orderBy, IPaginationFilter paginationFilter)
@@ -110,9 +110,9 @@ namespace GICoreServices
         public virtual async Task<IServiceResponseList<Model>> Get(Expression<Func<Entity, bool>> filter, IPaginationFilter paginationFilter)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, paginationFilter)));
         public virtual async Task<IServiceResponseList<Model>> Get(Expression<Func<Model, bool>> filter, IFilterQueryParams queryParams)
-            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(ConvertExpression(filter), queryParams.OrderBy, queryParams)));
+            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(ConvertExpression(filter), queryParams?.OrderBy, queryParams)));
         public virtual async Task<IServiceResponseList<Model>> Get(Expression<Func<Entity, bool>> filter, IFilterQueryParams queryParams)
-            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, queryParams.OrderBy, queryParams)));
+            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, queryParams?.OrderBy, queryParams)));
         public virtual async Task<IServiceResponseList<Model>> Get(Expression<Func<Model, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(ConvertExpression(filter), orderBy.Compile())));
         public virtual async Task<IServiceResponseList<Model>> Get(Expression<Func<Entity, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
@@ -134,7 +134,7 @@ namespace GICoreServices
         public virtual async Task<IServiceResponseList<Model>> Get(IDictionary<string, string> filter, IPaginationFilter paginationFilter)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, paginationFilter)));
         public virtual async Task<IServiceResponseList<Model>> Get(IDictionary<string, string> filter, IFilterQueryParams queryParams)
-            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, queryParams.OrderBy, queryParams)));
+            => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, queryParams?.OrderBy, queryParams)));
         public virtual async Task<IServiceResponseList<Model>> Get(IDictionary<string, string> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
             => await ExecuteAndHandleError(async () => Response(await _repositorio.Get(filter, orderBy.Compile())));
         public virtual async Task<IServiceResponseList<Model>> Get(IDictionary<string, string> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy, IPaginationFilter paginationFilter)

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IdeaCoreInfraestructure.UnitOfWork;
-using IdeaCoreTesting.Context;
+using Infraestructure.DBContext;
 
-namespace IdeaCoreTesting
+namespace Infraestructure.UnitOfWork
 {
-    public class TestUnitOfWork : UnitOfWork
+    public class TestUnitOfWork : IdeaCoreInfraestructure.UnitOfWork.UnitOfWork
     {
         public TestUnitOfWork(TestDBContext db) : base(db)
         {
