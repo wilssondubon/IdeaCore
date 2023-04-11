@@ -21,7 +21,7 @@ namespace TypeConfigurations
 
             entity.HasOne(d => d.IdTipoNavigation).WithMany(p => p.Electrodomestico)
             .HasForeignKey(d => d.IdTipo)
-            .OnDelete(DeleteBehavior.ClientSetNull)
+            .OnDelete(DeleteBehavior.ClientCascade)
             .HasConstraintName("FK_Electrodomestico_Tipo");
 
             OnConfigurePartial(entity);
