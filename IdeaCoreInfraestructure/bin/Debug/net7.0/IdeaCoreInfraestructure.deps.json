@@ -9,7 +9,6 @@
       "IdeaCoreInfraestructure/1.0.9": {
         "dependencies": {
           "IdeaCoreInterfaces": "1.0.9",
-          "IdeaCoreModels": "1.0.9",
           "IdeaCoreUtils": "1.0.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
         },
@@ -654,15 +653,10 @@
           "IdeaCoreInterfaces.dll": {}
         }
       },
-      "IdeaCoreModels/1.0.9": {
+      "IdeaCoreUtils/1.0.9": {
         "dependencies": {
           "IdeaCoreInterfaces": "1.0.9"
         },
-        "runtime": {
-          "IdeaCoreModels.dll": {}
-        }
-      },
-      "IdeaCoreUtils/1.0.9": {
         "runtime": {
           "IdeaCoreUtils.dll": {}
         }
@@ -1124,11 +1118,6 @@
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
     "IdeaCoreInterfaces/1.0.9": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "IdeaCoreModels/1.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

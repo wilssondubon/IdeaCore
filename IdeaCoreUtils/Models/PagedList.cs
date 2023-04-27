@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdeaCoreInfraestructure.Models
+namespace IdeaCoreUtils.Models
 {
     public class PagedList<T> : List<T>, IPagedReadOnlyList<T>
     {

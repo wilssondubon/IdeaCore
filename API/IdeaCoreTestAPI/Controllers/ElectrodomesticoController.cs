@@ -1,8 +1,8 @@
 ﻿using DTOs;
 using Entities;
 using IdeaCoreApplication.Contracts;
-using IdeaCoreModels;
 using IdeaCorePresentation;
+using IdeaCoreUtils.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -26,13 +26,9 @@ namespace IdeaCoreTestAPI.Controllers
         public async Task<IActionResult> GetAll([FromQuery] FilterQueryParams filterparams = null)
            => await _Get(filterparams);
 
-        [HttpGet("Query")]
-        public async Task<IActionResult> GetListByQuery([FromQuery] IDictionary<string, string> filter, [FromQuery] FilterQueryParams filterparams = null)
-            => await _Get(filter, filterparams);
-
         [HttpGet("ByTipo/{idTipo}")]
         public async Task<IActionResult> GetByTipo(short IdTipo, [FromQuery] FilterQueryParams filterparams = null)
-          => await _Get((ElectrodomesticoDTO t)=> t.IdTipo == IdTipo, filterparams);
+          => await _Get((Electrodomestico t)=> t.IdTipo == IdTipo, filterparams);
 
         [HttpPost("SaveNew")]
         public async Task<IActionResult> SaveNew([FromBody] ElectrodomesticoDTO data)

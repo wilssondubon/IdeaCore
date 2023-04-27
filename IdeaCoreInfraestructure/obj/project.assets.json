@@ -1093,22 +1093,12 @@
           "bin/placeholder/IdeaCoreInterfaces.dll": {}
         }
       },
-      "IdeaCoreModels/1.0.9": {
+      "IdeaCoreUtils/1.0.9": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "IdeaCoreInterfaces": "1.0.9"
         },
-        "compile": {
-          "bin/placeholder/IdeaCoreModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IdeaCoreModels.dll": {}
-        }
-      },
-      "IdeaCoreUtils/1.0.9": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/IdeaCoreUtils.dll": {}
         },
@@ -3295,11 +3285,6 @@
       "path": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj",
       "msbuildProject": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj"
     },
-    "IdeaCoreModels/1.0.9": {
-      "type": "project",
-      "path": "../IdeaCoreModels/IdeaCoreModels.csproj",
-      "msbuildProject": "../IdeaCoreModels/IdeaCoreModels.csproj"
-    },
     "IdeaCoreUtils/1.0.9": {
       "type": "project",
       "path": "../IdeaCoreUtils/IdeaCoreUtils.csproj",
@@ -3309,7 +3294,6 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "IdeaCoreInterfaces >= 1.0.9",
-      "IdeaCoreModels >= 1.0.9",
       "IdeaCoreUtils >= 1.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.4"
     ]
@@ -3357,9 +3341,6 @@
             "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj": {
               "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj"
             },
-            "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj": {
-              "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj"
-            },
             "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj": {
               "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj"
             }
@@ -3397,7 +3378,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

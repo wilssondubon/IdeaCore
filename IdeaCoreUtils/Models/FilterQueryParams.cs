@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdeaCoreModels
+namespace IdeaCoreUtils.Models
 {
     /// <summary>
     /// Parametros completos para paginacion y ordenamiento

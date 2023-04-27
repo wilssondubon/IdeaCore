@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IdeaCoreModels
+namespace IdeaCoreUtils.Models
 {
     /// <summary>
     /// clase de un modelo de link hateos

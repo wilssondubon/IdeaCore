@@ -1,6 +1,7 @@
 ﻿using IdeaCoreInfraestructure.Extensions;
 using IdeaCoreInterfaces.Common;
 using IdeaCoreInterfaces.Infraestructure;
+using IdeaCoreUtils.Extensions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

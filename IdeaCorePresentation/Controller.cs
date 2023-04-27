@@ -1,4 +1,4 @@
-﻿using IdeaCoreModels;
+﻿using IdeaCoreUtils.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

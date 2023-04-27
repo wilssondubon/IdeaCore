@@ -1,47 +1,42 @@
+﻿using AutoMapper;
+using DTOs;
+using Entities;
+using IdeaCoreApplication;
+using IdeaCoreApplication.Contracts;
 using IdeaCoreHateoas;
+using IdeaCoreInterfaces.Application.Response;
 using IdeaCoreInterfaces.Hateoas;
 using IdeaCoreInterfaces.Infraestructure;
+using IdeaCoreTestAPI.Controllers;
+using IdeaCoreTestAPI.hateoas;
+using IdeaCoreTestAPI.MapperProfile;
+using Infraestructure.DBContext;
+using Infraestructure.UnitOfWork;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
-using Moq;
-using Newtonsoft.Json.Linq;
-using System.Net.Http;
-using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Data.Common;
-using System.Net;
-using static System.Collections.Specialized.BitVector32;
-using Infraestructure.DBContext;
-using Entities;
-using Infraestructure.UnitOfWork;
-using AutoMapper;
-using IdeaCoreTestAPI.MapperProfile;
-using IdeaCoreTestAPI.hateoas;
-using IdeaCoreTestAPI.Controllers;
 using Microsoft.Extensions.Logging;
-using IdeaCoreApplication;
-using static System.Net.Mime.MediaTypeNames;
-using Microsoft.Extensions.Primitives;
-using Microsoft.AspNetCore.Mvc;
-using IdeaCoreApplication.Contracts;
-using IdeaCoreInfraestructure.UnitOfWork;
-using IdeaCorePresentation;
-using IdeaCoreInterfaces.Application.Response;
-using DTOs;
+using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace IdeaCoreTesting
+namespace IdeaCoreTestAPI.Tests
 {
-    public class TipoControllerTests
+    public class ElectrodomesticoControllerTests
     {
         private IUnitOfWork _unitOfWork;
         private IHateoasListWrapperService _hateoasListWrapperService;
         private IMapper _mapper;
         private IAppServices _appServices;
-        private ILogger<TipoController> _logger;
+        private ILogger<ElectrodomesticoController> _logger;
         private DefaultHttpContext _context;
 
-        private TipoController _controller;
+        private ElectrodomesticoController _controller;
 
         private async Task<TestDBContext> getTestDbContext()
         {
@@ -149,49 +144,31 @@ namespace IdeaCoreTesting
 
             _appServices = new AppServices(_unitOfWork, _mapper, _hateoasListWrapperService);
 
-            _controller = new TipoController(_logger, _appServices);
+            _controller = new ElectrodomesticoController(_logger, _appServices);
             _controller.ControllerContext = new Microsoft.AspNetCore.Mvc.ControllerContext();
             _controller.ControllerContext.HttpContext = _context;
         }
 
-        public TipoControllerTests()
+        public ElectrodomesticoControllerTests()
         {
             var dbcontext = getTestDbContext().Result;
             _unitOfWork = new TestUnitOfWork(dbcontext);
 
-            _logger = Mock.Of<ILogger<TipoController>>();
+            _logger = Mock.Of<ILogger<ElectrodomesticoController>>();
         }
 
-
         [Fact]
-        public async void TipoController_GetAll_ResultOk()
+        public async void ElectrodomesticoController_GetByTipo_ResultOk()
         {
             //Arrange
             installEnvironment("application/api.genesis.hateoas+json");
 
             //Act
-            var todos = await _controller.GetAll();
-            IServiceResponseList<TipoDTO> responseList = (IServiceResponseList<TipoDTO>)((ObjectResult)todos).Value;
+            var bytype = await _controller.GetByTipo(1, new IdeaCoreUtils.Models.FilterQueryParams() { OrderBy = "Descripcion" });
+            IServiceResponseList<ElectrodomesticoDTO> responseList = (IServiceResponseList<ElectrodomesticoDTO>)((ObjectResult)bytype).Value;
 
             //Assert
-            Assert.IsType<OkObjectResult>(todos);
-            Assert.True(responseList.data.Count() == 3);
-            Assert.True(responseList.links.Count() == 1);
-            Assert.True(responseList.data.Where(t => t.IdTipo == 1).First().links.Count() == 1);
-        }
-
-
-        [Fact]
-        public async void TipoController_GetById_ResultOk()
-        {
-            //Arrange
-            installEnvironment("application/api.genesis.hateoas+json");
-
-            //Act
-            var firstType = await _controller.GetById(1);
-
-            //Assert
-            Assert.IsType<OkObjectResult>(firstType);
+            Assert.IsType<OkObjectResult>(bytype);
         }
     }
 }

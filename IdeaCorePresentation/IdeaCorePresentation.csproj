@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdeaCoreInterfaces\IdeaCoreInterfaces.csproj" />
-    <ProjectReference Include="..\IdeaCoreModels\IdeaCoreModels.csproj" />
+    <ProjectReference Include="..\IdeaCoreUtils\IdeaCoreUtils.csproj" />
   </ItemGroup>
 
 </Project>

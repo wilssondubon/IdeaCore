@@ -1,8 +1,8 @@
 ﻿using DTOs;
 using Entities;
 using IdeaCoreApplication.Contracts;
-using IdeaCoreModels;
 using IdeaCorePresentation;
+using IdeaCoreUtils.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,10 +23,6 @@ namespace IdeaCoreTestAPI.Controllers
         [HttpGet("All")]
         public async Task<IActionResult> GetAll([FromQuery] FilterQueryParams filterparams = null)
            => await _Get(filterparams);
-
-        [HttpGet("Query")]
-        public async Task<IActionResult> GetListByQuery([FromQuery] IDictionary<string, string> filter, [FromQuery] FilterQueryParams filterparams = null)
-            => await _Get(filter, filterparams);
 
         [HttpPost("SaveNew")]
         public async Task<IActionResult> SaveNew([FromBody] TipoDTO data)

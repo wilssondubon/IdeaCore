@@ -1,6 +1,6 @@
 ﻿using IdeaCoreInterfaces.Common;
 using IdeaCoreInterfaces.Hateoas;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.WebUtilities;
 using System;

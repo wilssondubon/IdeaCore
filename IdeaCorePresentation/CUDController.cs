@@ -55,26 +55,26 @@ namespace IdeaCorePresentation
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
         /// <returns>resultado de una accion</returns>
-        public virtual async Task<IActionResult> SaveNew(IDictionary<string, object> data)
-        {
-            try
-            {
-                var objeto = _service.MapModelFromDictionary(data);
+        //public virtual async Task<IActionResult> SaveNew(IDictionary<string, object> data)
+        //{
+        //    try
+        //    {
+        //        var objeto = _service.MapModelFromDictionary(data);
 
-                var payload = await _service.Crear(objeto);
+        //        var payload = await _service.Crear(objeto);
 
-                if (payload.Status == 201)
-                {
-                    return CreatedAtAction(GetByIdActionName(), _service.ModelKeyParameters(payload.data), payload);
-                }
+        //        if (payload.Status == 201)
+        //        {
+        //            return CreatedAtAction(GetByIdActionName(), _service.ModelKeyParameters(payload.data), payload);
+        //        }
 
-                return StatusCode(payload.Status, payload);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
-        }
+        //        return StatusCode(payload.Status, payload);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return InternalServerError(ex);
+        //    }
+        //}
         /// <summary>
         /// funcion que ejecuta una actualizacion
         /// </summary>
@@ -102,48 +102,48 @@ namespace IdeaCorePresentation
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
         /// <returns>resultado de una accion</returns>
-        public virtual async Task<IActionResult> Update(IDictionary<string, object> data)
-        {
-            try
-            {
-                var objeto = _service.MapModelFromDictionary(data);
+        //public virtual async Task<IActionResult> Update(IDictionary<string, object> data)
+        //{
+        //    try
+        //    {
+        //        var objeto = _service.MapModelFromDictionary(data);
 
-                var payload = await _service.Actualizar(objeto);
+        //        var payload = await _service.Actualizar(objeto);
 
-                if (payload.Status == 200)
-                {
-                    return Ok(payload);
-                }
-                return StatusCode(payload.Status, payload);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
-        }
+        //        if (payload.Status == 200)
+        //        {
+        //            return Ok(payload);
+        //        }
+        //        return StatusCode(payload.Status, payload);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return InternalServerError(ex);
+        //    }
+        //}
         /// <summary>
         /// funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal</param>
         /// <returns>resultado de una accion</returns>
-        public virtual async Task<IActionResult> RemoveEntity(IDictionary<string, string> filter)
-        {
-            try
-            {
-                var modelo = await _service.GetById(filter.Values.ToArray());
+        //public virtual async Task<IActionResult> RemoveEntity(IDictionary<string, string> filter)
+        //{
+        //    try
+        //    {
+        //        var modelo = await _service.GetById(filter.Values.ToArray());
 
-                if (modelo.Status != 1)
-                    return BadRequest(modelo);
+        //        if (modelo.Status != 1)
+        //            return BadRequest(modelo);
 
-                var payload = await _service.Remove(filter.Values.ToArray());
+        //        var payload = await _service.Remove(filter.Values.ToArray());
 
-                return StatusCode(payload.Status, payload);
-            }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
-        }
+        //        return StatusCode(payload.Status, payload);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return InternalServerError(ex);
+        //    }
+        //}
         /// <summary>
         /// funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
         /// </summary>

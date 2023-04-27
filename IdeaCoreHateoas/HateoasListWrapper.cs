@@ -1,6 +1,5 @@
 ﻿using IdeaCoreInterfaces.Application.Response;
 using IdeaCoreInterfaces.Hateoas;
-using IdeaCoreModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using System;

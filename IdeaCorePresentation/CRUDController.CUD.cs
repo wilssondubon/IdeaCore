@@ -31,8 +31,8 @@ namespace IdeaCorePresentation
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
         /// <returns>resultado de una accion</returns>
-        protected virtual async Task<IActionResult> _SaveNew(IDictionary<string, object> data)
-            => await ExecuteCUDAction(() => cudController.SaveNew(data));
+        //protected virtual async Task<IActionResult> _SaveNew(IDictionary<string, object> data)
+        //    => await ExecuteCUDAction(() => cudController.SaveNew(data));
         /// <summary>
         /// funcion que ejecuta una actualizacion
         /// </summary>
@@ -45,15 +45,15 @@ namespace IdeaCorePresentation
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad</param>
         /// <returns>resultado de una accion</returns>
-        protected virtual async Task<IActionResult> _Update(IDictionary<string, object> data)
-            => await ExecuteCUDAction(() => cudController.Update(data));
+        //protected virtual async Task<IActionResult> _Update(IDictionary<string, object> data)
+        //    => await ExecuteCUDAction(() => cudController.Update(data));
         /// <summary>
         /// funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
         /// </summary>
         /// <param name="data">diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal</param>
         /// <returns>resultado de una accion</returns>
-        protected virtual async Task<IActionResult> _RemoveEntity(IDictionary<string, string> filter)
-            => await ExecuteCUDAction(() => cudController.RemoveEntity(filter));
+        //protected virtual async Task<IActionResult> _RemoveEntity(IDictionary<string, string> filter)
+        //    => await ExecuteCUDAction(() => cudController.RemoveEntity(filter));
         /// <summary>
         /// funcion que ejecuta una eliminacion basada en un diccionario de nombre de propiedad y valor de la propiedad que conforman por lo menos una llave principal
         /// </summary>

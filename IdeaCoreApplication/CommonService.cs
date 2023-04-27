@@ -11,7 +11,7 @@ using IdeaCoreInterfaces.Common;
 using IdeaCoreInterfaces.Hateoas;
 using IdeaCoreInterfaces.Application;
 using IdeaCoreInterfaces.Application.Response;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 
 namespace GICoreServices
 {
@@ -129,6 +129,18 @@ namespace GICoreServices
             /// links de la lista y la paginacion
             /// </summary>
             public IList<ILink>? links { get; set; }
+            public ServiceResponseList(IEnumerable<Model> o, ITrackerResponse t, IHateoasListWrapperService hateoasListWrapperService, int totalRecords)
+              : base(o, t)
+            {
+                _hateoasListWrapperService = hateoasListWrapperService;
+                _totalRecords = totalRecords;
+
+                if (!_hateoasListWrapperService.isHateoasRequest())
+                    return;
+
+                var hateoasListWrapper = _hateoasListWrapperService.Wrap(data);
+                links = hateoasListWrapper.links;
+            }
             /// <summary>
             /// crea una respueta basada en una lista de entidades que mapearan a una lista de modelos
             /// </summary>
@@ -158,6 +170,20 @@ namespace GICoreServices
             /// <param name="uriService">servicio que accede al httpcontext de la peticion</param>
             public ServiceResponseList(IPagedReadOnlyList<Entity> o, ITrackerResponse t, IMapper mapper, IHateoasListWrapperService hateoasListWrapperService)
               : base(mapper.Map<IEnumerable<Model>>(o), t)
+            {
+                _hateoasListWrapperService = hateoasListWrapperService;
+                _totalRecords = o.TotalRecords;
+
+                if (!_hateoasListWrapperService.isHateoasRequest())
+                    return;
+
+                var hateoasListWrapper = _hateoasListWrapperService.Wrap(data);
+                hateoasListWrapper = _hateoasListWrapperService.AddPagination(hateoasListWrapper, _totalRecords, new FilterQueryParams(o.PageNumber, o.PageSize));
+                links = hateoasListWrapper.links;
+                paging = hateoasListWrapper.paging;
+            }
+            public ServiceResponseList(IPagedReadOnlyList<Model> o, ITrackerResponse t, IHateoasListWrapperService hateoasListWrapperService)
+              : base(o, t)
             {
                 _hateoasListWrapperService = hateoasListWrapperService;
                 _totalRecords = o.TotalRecords;

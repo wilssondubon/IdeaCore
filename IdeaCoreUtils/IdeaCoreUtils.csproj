@@ -11,4 +11,8 @@
     <Version>1.0.9</Version>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IdeaCoreInterfaces\IdeaCoreInterfaces.csproj" />
+  </ItemGroup>
+
 </Project>

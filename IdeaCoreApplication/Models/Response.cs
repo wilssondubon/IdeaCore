@@ -1,5 +1,5 @@
 ﻿using IdeaCoreInterfaces.Application.Response;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,7 +1,7 @@
 ﻿using IdeaCoreApplication.Extensions;
 using IdeaCoreApplication.Models;
 using IdeaCoreInterfaces.Common;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -76,6 +76,7 @@ namespace GICoreServices
         /// <param name="o">objeto de tipo modelo en el que se basara la respuesta</param>
         /// <returns>respuesta</returns>
         virtual protected CommonService<Model, Entity>.ServiceResponse Response(Model o) => new CommonService<Model, Entity>.ServiceResponse(o, new TrackerResponse());
+        virtual protected CommonService<Model, Entity>.ServiceResponseList Response(IEnumerable<Model> o) => new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _hateoasListWrapperService, o.Count());
         /// <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelo, la respuesta puede ser un error si la lista de entidades no contiene elementos
         /// </summary>
@@ -88,6 +89,13 @@ namespace GICoreServices
                 return noListNoFoundError();
 
             return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _hateoasListWrapperService, totalRecords);
+        }
+        virtual protected CommonService<Model, Entity>.ServiceResponseList Response(IEnumerable<Model> o, int totalRecords)
+        {
+            if (o == null)
+                return noListNoFoundError();
+
+            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _hateoasListWrapperService, totalRecords);
         }
         // <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelo, la respuesta puede ser un error si la lista de entidades no contiene elementos
@@ -112,6 +120,13 @@ namespace GICoreServices
                 return noListNoFoundError();
 
             return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(), _mapper, _hateoasListWrapperService);
+        }
+        virtual protected CommonService<Model, Entity>.ServiceResponseList Response(IPagedReadOnlyList<Model> o)
+        {
+            if (o == null)
+                return noListNoFoundError();
+
+            return new CommonService<Model, Entity>.ServiceResponseList(o, new TrackerResponse(),  _hateoasListWrapperService);
         }
         /// <summary>
         /// recibe una lista de entidades y crea una respuesta mapeandolas hacia una lista modelos paginada
