@@ -1127,7 +1127,7 @@
           }
         }
       },
-      "IdeaCoreInterfaces/1.0.9": {
+      "IdeaCoreInterfaces/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1143,22 +1143,12 @@
           "bin/placeholder/IdeaCoreInterfaces.dll": {}
         }
       },
-      "IdeaCoreModels/1.0.9": {
+      "IdeaCoreUtils/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "IdeaCoreInterfaces": "1.0.9"
+          "IdeaCoreInterfaces": "1.1.0"
         },
-        "compile": {
-          "bin/placeholder/IdeaCoreModels.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IdeaCoreModels.dll": {}
-        }
-      },
-      "IdeaCoreUtils/1.0.9": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
           "bin/placeholder/IdeaCoreUtils.dll": {}
         },
@@ -3382,17 +3372,12 @@
         "version.txt"
       ]
     },
-    "IdeaCoreInterfaces/1.0.9": {
+    "IdeaCoreInterfaces/1.1.0": {
       "type": "project",
       "path": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj",
       "msbuildProject": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj"
     },
-    "IdeaCoreModels/1.0.9": {
-      "type": "project",
-      "path": "../IdeaCoreModels/IdeaCoreModels.csproj",
-      "msbuildProject": "../IdeaCoreModels/IdeaCoreModels.csproj"
-    },
-    "IdeaCoreUtils/1.0.9": {
+    "IdeaCoreUtils/1.1.0": {
       "type": "project",
       "path": "../IdeaCoreUtils/IdeaCoreUtils.csproj",
       "msbuildProject": "../IdeaCoreUtils/IdeaCoreUtils.csproj"
@@ -3401,9 +3386,8 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "AutoMapper >= 12.0.1",
-      "IdeaCoreInterfaces >= 1.0.9",
-      "IdeaCoreModels >= 1.0.9",
-      "IdeaCoreUtils >= 1.0.9",
+      "IdeaCoreInterfaces >= 1.1.0",
+      "IdeaCoreUtils >= 1.1.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.AspNetCore.Routing.Abstractions >= 2.2.0",
       "Microsoft.AspNetCore.WebUtilities >= 2.2.0",
@@ -3417,7 +3401,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.9",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreApplication\\IdeaCoreApplication.csproj",
       "projectName": "IdeaCoreApplication",
@@ -3452,9 +3436,6 @@
           "projectReferences": {
             "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj": {
               "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj"
-            },
-            "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj": {
-              "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj"
             },
             "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj": {
               "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj"
@@ -3509,7 +3490,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

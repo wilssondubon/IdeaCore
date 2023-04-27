@@ -8,7 +8,7 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    <Version>1.0.9</Version>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdeaCoreInterfaces\IdeaCoreInterfaces.csproj" />
-    <ProjectReference Include="..\IdeaCoreModels\IdeaCoreModels.csproj" />
     <ProjectReference Include="..\IdeaCoreUtils\IdeaCoreUtils.csproj" />
   </ItemGroup>
 

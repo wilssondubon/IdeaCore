@@ -15,6 +15,6 @@ namespace IdeaCoreInterfaces.Application.Response
         /// <summary>
         /// modelo en el que se basa la respuesta
         /// </summary>
-        Model data { get; }
+        Model? data { get; }
     }
 }

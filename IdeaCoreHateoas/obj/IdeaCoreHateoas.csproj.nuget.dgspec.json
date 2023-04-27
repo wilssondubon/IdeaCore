@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Personales2023\\BackendIdea\\IdeaCoreHateoas\\IdeaCoreHateoas.csproj": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreHateoas\\IdeaCoreHateoas.csproj",
         "projectName": "IdeaCoreHateoas",
@@ -41,8 +41,8 @@
               "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj": {
                 "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj"
               },
-              "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj": {
-                "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj"
+              "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj": {
+                "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj"
               }
             }
           }
@@ -98,12 +98,12 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
     "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj",
         "projectName": "IdeaCoreInterfaces",
@@ -181,18 +181,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj": {
-      "version": "1.0.9",
+    "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj": {
+      "version": "1.1.0",
       "restore": {
-        "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj",
-        "projectName": "IdeaCoreModels",
-        "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\IdeaCoreModels.csproj",
+        "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj",
+        "projectName": "IdeaCoreUtils",
+        "projectPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj",
         "packagesPath": "C:\\Users\\Analista.Programador\\.nuget\\packages\\",
-        "outputPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreModels\\obj\\",
+        "outputPath": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -250,7 +250,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -70,15 +70,9 @@ namespace IdeaCorePresentation
             => await ExecuteAction(async () => await _service.Get(o));
         public virtual async Task<IActionResult> GetFirst()
             => await ExecuteAction(async () => await _service.GetFirst());
-        public virtual async Task<IActionResult> GetFirst(Expression<Func<Model, bool>> filter)
-            => await ExecuteAction(async () => await _service.GetFirst(filter));
         public virtual async Task<IActionResult> GetFirst(Expression<Func<Entity, bool>> filter)
             => await ExecuteAction(async () => await _service.GetFirst(filter));
-        public virtual async Task<IActionResult> GetFirst(Expression<Func<Model, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
-           => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
         public virtual async Task<IActionResult> GetFirst(Expression<Func<Entity, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
-           => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
-        public virtual async Task<IActionResult> GetFirst(Expression<Func<Model, bool>> filter, string orderBy)
            => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
         public virtual async Task<IActionResult> GetFirst(Expression<Func<Entity, bool>> filter, string orderBy)
            => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
@@ -86,12 +80,6 @@ namespace IdeaCorePresentation
            => await ExecuteAction(async () => await _service.GetFirst(orderBy));
         public virtual async Task<IActionResult> GetFirst(string orderBy)
            => await ExecuteAction(async () => await _service.GetFirst(orderBy));
-        public virtual async Task<IActionResult> GetFirst(IDictionary<string, string> filter)
-           => await ExecuteAction(async () => await _service.GetFirst(filter));
-        public virtual async Task<IActionResult> GetFirst(IDictionary<string, string> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
-           => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
-        public virtual async Task<IActionResult> GetFirst(IDictionary<string, string> filter, string orderBy)
-           => await ExecuteAction(async () => await _service.GetFirst(filter, orderBy));
         public virtual async Task<IActionResult> GetByID(object id)
            => await ExecuteAction(async () => await _service.GetByIDAsync(id));
         public virtual async Task<IActionResult> GetByID(params object[] keyvalues)
@@ -114,49 +102,20 @@ namespace IdeaCorePresentation
            => await ExecuteAction(async () => await _service.Get(filter));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter)
            => await ExecuteAction(async () => await _service.Get(filter));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, paginationFilter));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, IPaginationFilter paginationFilter)
            => await ExecuteAction(async () => await _service.Get(filter, paginationFilter));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, IFilterQueryParams queryParams)
-           => await ExecuteAction(async () => await _service.Get(filter, queryParams));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, IFilterQueryParams queryParams)
            => await ExecuteAction(async () => await _service.Get(filter, queryParams));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
            => await ExecuteAction(async () => await _service.Get(filter, orderBy));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy, IPaginationFilter paginationFilter)
            => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, string orderBy)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, string orderBy)
            => await ExecuteAction(async () => await _service.Get(filter, orderBy));
-        public virtual async Task<IActionResult> Get(Expression<Func<Model, bool>> filter, string orderBy, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
         public virtual async Task<IActionResult> Get(Expression<Func<Entity, bool>> filter, string orderBy, IPaginationFilter paginationFilter)
            => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
         public virtual async Task<IActionResult> Get(IDictionary<string, string> filter)
            => await ExecuteAction(async () => await _service.Get(filter));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, paginationFilter));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, IFilterQueryParams queryParams)
-           => await ExecuteAction(async () => await _service.Get(filter, queryParams));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, Expression<Func<IQueryable<Entity>, IOrderedQueryable<Entity>>> orderBy, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, string orderBy)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy));
-        public virtual async Task<IActionResult> Get(IDictionary<string, string> filter, string orderBy, IPaginationFilter paginationFilter)
-           => await ExecuteAction(async () => await _service.Get(filter, orderBy, paginationFilter));
-        /// <summary>
-        /// funcion para devolver el nombre de la accion del controlador que funciona como una forma de obtener un unico elemento por su llave principal
-        /// </summary>
-        /// <returns>nombre la accion</returns>
-        /// <exception cref="NotImplementedException">no Implementada</exception>
         protected override string GetByIdActionName()
         {
             throw new NotImplementedException();

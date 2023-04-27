@@ -1,5 +1,5 @@
 ﻿using IdeaCoreInterfaces.Application.Response;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace IdeaCoreApplication.Models
         /// <summary>
         /// modelo en el que se basa la respuesta
         /// </summary>
-        protected T? Item1 { get; set; }
+        public T? data { get; set; }
         /// <summary>
         /// tracker de la respuesta
         /// </summary>
@@ -56,7 +56,7 @@ namespace IdeaCoreApplication.Models
         /// <param name="t">tracker de la respuesta</param>
         public Response(T o, ITrackerResponse t)
         {
-            Item1 = o;
+            data = o;
             TrackerResponse = t;
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace IdeaCoreApplication.Models
         public Response(ITrackerResponse t)
         {
             TrackerResponse = t;
-            Item1 = default;
+            data = default;
         }
         /// <summary>
         /// inicializa una respuesta de error
@@ -78,7 +78,7 @@ namespace IdeaCoreApplication.Models
         public Response(short code, string error, string[]? errors, bool succeded)
         {
             TrackerResponse = new TrackerResponse(code, error, errors, succeded);
-            Item1 = default;
+            data = default;
         }
         /// <summary>
         /// inicializa una respuesta con un tracker por default codigo 200 y mensaje OK
@@ -86,7 +86,7 @@ namespace IdeaCoreApplication.Models
         /// <param name="o">modelo de la respuesta</param>
         public Response(T o)
         {
-            Item1 = o;
+            data = o;
             TrackerResponse = new TrackerResponse(200, "OK");
         }
         /// <summary>
@@ -95,7 +95,7 @@ namespace IdeaCoreApplication.Models
         public Response()
         {
             TrackerResponse = null;
-            Item1 = default;
+            data = default;
         }
     }
 }

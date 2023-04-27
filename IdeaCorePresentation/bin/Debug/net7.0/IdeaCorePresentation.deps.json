@@ -9,7 +9,7 @@
       "IdeaCorePresentation/1.0.9": {
         "dependencies": {
           "IdeaCoreInterfaces": "1.0.9",
-          "IdeaCoreModels": "1.0.9",
+          "IdeaCoreUtils": "1.0.9",
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Microsoft.AspNetCore.Routing.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.4"
@@ -1165,12 +1165,12 @@
           "IdeaCoreInterfaces.dll": {}
         }
       },
-      "IdeaCoreModels/1.0.9": {
+      "IdeaCoreUtils/1.0.9": {
         "dependencies": {
           "IdeaCoreInterfaces": "1.0.9"
         },
         "runtime": {
-          "IdeaCoreModels.dll": {}
+          "IdeaCoreUtils.dll": {}
         }
       }
     }
@@ -1942,7 +1942,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "IdeaCoreModels/1.0.9": {
+    "IdeaCoreUtils/1.0.9": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

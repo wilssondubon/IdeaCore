@@ -32,5 +32,3 @@ D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\obj\Debug\net7.0\IdeaCoreI
 D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\obj\Debug\net7.0\refint\IdeaCoreInfraestructure.dll
 D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\obj\Debug\net7.0\IdeaCoreInfraestructure.pdb
 D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\obj\Debug\net7.0\ref\IdeaCoreInfraestructure.dll
-D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\bin\Debug\net7.0\IdeaCoreModels.dll
-D:\Personales2023\BackendIdea\IdeaCoreInfraestructure\bin\Debug\net7.0\IdeaCoreModels.pdb

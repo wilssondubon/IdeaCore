@@ -8,7 +8,7 @@ using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.Net.Http.Headers;
 using IdeaCoreInterfaces.Hateoas;
-using IdeaCoreModels;
+using IdeaCoreUtils.Models;
 
 namespace IdeaCoreHateoas
 {

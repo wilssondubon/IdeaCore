@@ -1,0 +1,45 @@
+﻿{
+  "CodeGenerationMode": 3,
+  "ContextClassName": "D:\\PERSONALES2023\\BACKENDIDEA\\IDEACORETESTING\\TESTDB.MDFContext",
+  "ContextNamespace": null,
+  "DefaultDacpacSchema": null,
+  "FilterSchemas": false,
+  "IncludeConnectionString": false,
+  "ModelNamespace": null,
+  "OutputContextPath": "Context",
+  "OutputPath": "Entities",
+  "PreserveCasingWithRegex": true,
+  "ProjectRootNamespace": "IdeaCoreTesting",
+  "Schemas": null,
+  "SelectedHandlebarsLanguage": 0,
+  "SelectedToBeGenerated": 0,
+  "Tables": [
+    {
+      "Name": "[dbo].[Electrodomestico]",
+      "ObjectType": 0
+    },
+    {
+      "Name": "[dbo].[Tipo]",
+      "ObjectType": 0
+    }
+  ],
+  "UiHint": "(LocalDB)\\MSSQLLocalDB;Database=TestDB",
+  "UncountableWords": null,
+  "UseBoolPropertiesWithoutDefaultSql": false,
+  "UseDatabaseNames": false,
+  "UseDateOnlyTimeOnly": false,
+  "UseDbContextSplitting": true,
+  "UseFluentApiOnly": true,
+  "UseHandleBars": false,
+  "UseHierarchyId": false,
+  "UseInflector": false,
+  "UseLegacyPluralizer": false,
+  "UseManyToManyEntity": true,
+  "UseNoDefaultConstructor": true,
+  "UseNoObjectFilter": false,
+  "UseNodaTime": false,
+  "UseNullableReferences": false,
+  "UseSchemaFolders": false,
+  "UseSpatial": false,
+  "UseT4": false
+}

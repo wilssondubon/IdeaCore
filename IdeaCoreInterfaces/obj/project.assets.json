@@ -3159,7 +3159,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.9",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj",
       "projectName": "IdeaCoreInterfaces",
@@ -3237,7 +3237,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
