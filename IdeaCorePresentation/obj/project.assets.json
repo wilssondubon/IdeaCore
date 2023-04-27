@@ -1876,7 +1876,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "IdeaCoreInterfaces/1.0.9": {
+      "IdeaCoreInterfaces/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1892,11 +1892,11 @@
           "bin/placeholder/IdeaCoreInterfaces.dll": {}
         }
       },
-      "IdeaCoreUtils/1.0.9": {
+      "IdeaCoreUtils/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "IdeaCoreInterfaces": "1.0.9"
+          "IdeaCoreInterfaces": "1.1.0"
         },
         "compile": {
           "bin/placeholder/IdeaCoreUtils.dll": {}
@@ -5814,12 +5814,12 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "IdeaCoreInterfaces/1.0.9": {
+    "IdeaCoreInterfaces/1.1.0": {
       "type": "project",
       "path": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj",
       "msbuildProject": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj"
     },
-    "IdeaCoreUtils/1.0.9": {
+    "IdeaCoreUtils/1.1.0": {
       "type": "project",
       "path": "../IdeaCoreUtils/IdeaCoreUtils.csproj",
       "msbuildProject": "../IdeaCoreUtils/IdeaCoreUtils.csproj"
@@ -5827,8 +5827,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "IdeaCoreInterfaces >= 1.0.9",
-      "IdeaCoreUtils >= 1.0.9",
+      "IdeaCoreInterfaces >= 1.1.0",
+      "IdeaCoreUtils >= 1.1.0",
       "Microsoft.AspNetCore.Mvc.Core >= 2.2.5",
       "Microsoft.AspNetCore.Routing.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 7.0.4"
@@ -5841,7 +5841,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.9",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCorePresentation\\IdeaCorePresentation.csproj",
       "projectName": "IdeaCorePresentation",

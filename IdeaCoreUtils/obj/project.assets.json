@@ -1024,7 +1024,7 @@
           }
         }
       },
-      "IdeaCoreInterfaces/1.0.9": {
+      "IdeaCoreInterfaces/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -3159,7 +3159,7 @@
         "version.txt"
       ]
     },
-    "IdeaCoreInterfaces/1.0.9": {
+    "IdeaCoreInterfaces/1.1.0": {
       "type": "project",
       "path": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj",
       "msbuildProject": "../IdeaCoreInterfaces/IdeaCoreInterfaces.csproj"
@@ -3167,7 +3167,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "IdeaCoreInterfaces >= 1.0.9"
+      "IdeaCoreInterfaces >= 1.1.0"
     ]
   },
   "packageFolders": {
@@ -3177,7 +3177,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.9",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj",
       "projectName": "IdeaCoreUtils",

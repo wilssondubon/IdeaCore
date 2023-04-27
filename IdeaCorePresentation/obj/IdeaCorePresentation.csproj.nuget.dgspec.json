@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreInterfaces\\IdeaCoreInterfaces.csproj",
         "projectName": "IdeaCoreInterfaces",
@@ -88,7 +88,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\IdeaCorePresentation\\IdeaCorePresentation.csproj": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCorePresentation\\IdeaCorePresentation.csproj",
         "projectName": "IdeaCorePresentation",
@@ -174,7 +174,7 @@
       }
     },
     "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj": {
-      "version": "1.0.9",
+      "version": "1.1.0",
       "restore": {
         "projectUniqueName": "D:\\Personales2023\\BackendIdea\\IdeaCoreUtils\\IdeaCoreUtils.csproj",
         "projectName": "IdeaCoreUtils",
